@@ -1,0 +1,2476 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KLOSET — Architectural Wardrobe & Style Intelligence</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Syne, Space Grotesk, Plus Jakarta Sans (Rue Miche Architecture) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bone: {
+              DEFAULT: '#F5F3EF',
+              muted: '#ECE8E1',
+              darker: '#DDD7CD'
+            },
+            obsidian: {
+              DEFAULT: '#121212',
+              surface: '#1A1A1A',
+              card: '#242424'
+            },
+            streetRed: '#FF1801',
+            hairline: 'rgba(18, 18, 18, 0.12)'
+          },
+          fontFamily: {
+            display: ['"Syne"', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Fashionable Architectural Background */
+    body {
+      background-color: #F5F3EF;
+      color: #121212;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(rgba(18, 18, 18, 0.08) 1px, transparent 1px),
+        linear-gradient(to right, rgba(18, 18, 18, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(18, 18, 18, 0.02) 1px, transparent 1px);
+      background-size: 32px 32px, 128px 128px, 128px 128px;
+      background-position: 0 0, 0 0, 0 0;
+    }
+
+    .border-hairline {
+      border-color: rgba(18, 18, 18, 0.12);
+    }
+
+    /* Ultra-Smooth Bezier Micro-Transitions */
+    * {
+      transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    button, a, input, select {
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Editorial Marquee */
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-editorial-marquee {
+      display: flex;
+      width: 200%;
+      animation: marquee 34s linear infinite;
+    }
+    .animate-editorial-marquee:hover {
+      animation-play-state: paused;
+    }
+
+    /* Custom Minimal Scrollbar */
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F5F3EF;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #121212;
+    }
+
+    /* Toast Animation */
+    @keyframes toastFade {
+      0% { opacity: 0; transform: translateY(15px); }
+      15% { opacity: 1; transform: translateY(0); }
+      85% { opacity: 1; transform: translateY(0); }
+      100% { opacity: 0; transform: translateY(-15px); }
+    }
+    .animate-toast {
+      animation: toastFade 3.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Corner Tick Decor */
+    .corner-tick {
+      position: relative;
+    }
+    .corner-tick::before {
+      content: '+';
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 14px;
+      color: rgba(18, 18, 18, 0.3);
+    }
+    .corner-tick::after {
+      content: '+';
+      position: absolute;
+      bottom: -8px;
+      right: -8px;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 14px;
+      color: rgba(18, 18, 18, 0.3);
+    }
+  </style>
+</head>
+<body class="selection:bg-obsidian selection:text-bone relative min-h-screen">
+
+  <!-- Ambient Haute-Couture Blurred Orbs for Depth -->
+  <div class="fixed top-20 left-[-10%] w-[500px] h-[500px] bg-bone-darker/40 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+  <div class="fixed bottom-10 right-[-10%] w-[600px] h-[600px] bg-stone-300/30 rounded-full blur-[160px] pointer-events-none -z-10"></div>
+
+  <!-- 1. TOP MARQUEE BANNER -->
+  <div class="bg-obsidian text-bone text-[11px] font-mono tracking-[0.25em] uppercase py-2.5 border-b border-obsidian overflow-hidden relative z-30">
+    <div class="animate-editorial-marquee whitespace-nowrap flex items-center gap-10">
+      <span>// KLOSET ARCHIVAL REPOSITORY 2026</span>
+      <span>• STREETWEAR SILHOUETTES &amp; MINIMALIST PROPORTIONS</span>
+      <span>• STYLE - OCCASION - CLIMATE HARMONY MATRIX</span>
+      <span>• ALL CORE ENGINES VERIFIED &amp; INTERACTIVE</span>
+      <span>// KLOSET ARCHIVAL REPOSITORY 2026</span>
+      <span>• STREETWEAR SILHOUETTES &amp; MINIMALIST PROPORTIONS</span>
+      <span>• STYLE - OCCASION - CLIMATE HARMONY MATRIX</span>
+      <span>• ALL CORE ENGINES VERIFIED &amp; INTERACTIVE</span>
+    </div>
+  </div>
+
+  <!-- 2. NAVIGATION BAR -->
+  <header class="sticky top-0 z-30 bg-bone/95 backdrop-blur-md border-b border-hairline">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-2 group shrink-0 mr-8 lg:mr-14">
+        <span class="font-display font-extrabold text-3xl sm:text-4xl tracking-tight text-obsidian uppercase group-hover:opacity-80">
+          KLOSET
+        </span>
+        <span class="text-[10px] font-mono tracking-widest text-obsidian/60 align-top uppercase mt-1">EST. 2026</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-8 xl:gap-10 text-[11px] font-mono tracking-[0.22em] uppercase text-obsidian/75">
+        <a href="#studio" class="hover:text-obsidian hover:-translate-y-0.5 transition-transform">01. Studio Canvas</a>
+        <a href="#wardrobe" class="hover:text-obsidian hover:-translate-y-0.5 transition-transform">02. My Closet</a>
+        <a href="#fashionista" class="hover:text-obsidian hover:-translate-y-0.5 transition-transform">03. Fashionista Fits</a>
+        <a href="#diagnostic" class="hover:text-obsidian hover:-translate-y-0.5 transition-transform">04. Style &amp; Capsule Matrix</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-3 shrink-0">
+        <!-- Favorites Trigger Button -->
+        <button onclick="openFavoritesModal()" class="relative bg-bone-muted hover:bg-bone-darker active:scale-95 text-obsidian border border-hairline text-[11px] font-mono uppercase px-4 py-2.5 flex items-center gap-2">
+          <i class="fa-solid fa-heart text-streetRed"></i>
+          <span class="hidden sm:inline">Favorites</span>
+          <span id="fav-count-badge" class="bg-obsidian text-bone text-[9px] font-bold px-1.5 py-0.2 rounded-full">0</span>
+        </button>
+
+        <!-- Add Piece Button -->
+        <button onclick="openModal()" class="bg-obsidian hover:bg-obsidian/85 active:scale-95 text-bone text-[11px] font-mono font-medium tracking-widest uppercase px-4 py-2.5 shadow-sm hover:shadow-md flex items-center gap-2">
+          <i class="fa-solid fa-plus text-xs"></i>
+          <span class="hidden sm:inline">Add Piece</span>
+        </button>
+
+        <!-- User Authentication Trigger Container -->
+        <div id="auth-header-container">
+          <button onclick="openAuthModal('login')" class="border border-obsidian hover:bg-obsidian hover:text-bone text-obsidian active:scale-95 text-[11px] font-mono uppercase px-4 py-2.5 flex items-center gap-2">
+            <i class="fa-regular fa-user"></i>
+            <span>Sign In</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- 3. HERO SHOWCASE -->
+  <section class="border-b border-hairline py-24 lg:py-32 relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none flex items-center justify-center opacity-[0.03] select-none">
+      <span class="font-display text-[26vw] font-black uppercase text-obsidian">KLOSÊT</span>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8 relative z-10">
+      
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-bone-muted border border-hairline text-obsidian text-[11px] font-mono uppercase tracking-[0.25em]">
+        <span class="w-2 h-2 bg-obsidian rounded-full animate-ping"></span>
+        Architectural Wardrobe &amp; Style Intelligence
+      </div>
+
+      <!-- Slogan -->
+      <h1 class="font-display font-extrabold text-6xl sm:text-8xl lg:text-9xl leading-[0.9] text-obsidian uppercase tracking-tight">
+        ESSENTIAL <br>
+        ROTATION. <br>
+        <span class="italic font-normal">UNFORCED STYLE.</span>
+      </h1>
+
+      <p class="text-obsidian/75 text-base sm:text-lg font-normal max-w-2xl mx-auto leading-relaxed pt-2">
+        Bridging high-impact streetwear drapes with refined minimalist silhouettes. KLOSET balances your local wardrobe items according to personal style, setting, and climate harmony.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+        <a href="#studio" class="bg-obsidian hover:bg-obsidian/85 active:scale-95 text-bone px-9 py-4 font-mono text-xs uppercase tracking-widest shadow-md hover:shadow-xl flex items-center gap-3">
+          <span>Open Studio Canvas</span>
+          <i class="fa-solid fa-arrow-right-long text-xs"></i>
+        </a>
+        <a href="#diagnostic" class="bg-transparent hover:bg-bone-muted active:scale-95 text-obsidian px-9 py-4 font-mono text-xs uppercase tracking-widest border border-obsidian">
+          Calibrate Style &amp; Capsule
+        </a>
+      </div>
+
+      <!-- Metrics Ledger with Architectural Corners -->
+      <div class="corner-tick grid grid-cols-3 max-w-2xl mx-auto gap-8 pt-10 border-t border-hairline">
+        <div>
+          <p class="font-display font-bold text-4xl text-obsidian" id="stat-count">20</p>
+          <p class="text-[10px] font-mono uppercase tracking-widest text-obsidian/60 mt-1">Archived Items</p>
+        </div>
+        <div>
+          <p class="font-display font-bold text-4xl text-obsidian">72+</p>
+          <p class="text-[10px] font-mono uppercase tracking-widest text-obsidian/60 mt-1">Curated Fits</p>
+        </div>
+        <div>
+          <p class="font-display font-bold text-4xl text-obsidian">100%</p>
+          <p class="text-[10px] font-mono uppercase tracking-widest text-obsidian/60 mt-1">Synergy Ratio</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. SECTION 01: OUTFIT STUDIO CANVAS -->
+  <section id="studio" class="scroll-mt-28 py-20 lg:py-24 border-b border-hairline bg-bone-muted/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="text-xs font-mono text-obsidian/60 uppercase tracking-[0.25em] block mb-2">// ALGORITHMIC SYNTHESIS</span>
+          <h2 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-obsidian tracking-tight uppercase leading-[0.95]">01. STUDIO CANVAS</h2>
+        </div>
+        <p class="text-obsidian/70 text-xs sm:text-sm max-w-md leading-relaxed font-normal">
+          Calibrate fit parameters across Style, Occasion, and Climate. Synthesize an outfit and bookmark it to your personal favorites collection.
+        </p>
+      </div>
+
+      <!-- Controls Matrix: STYLE - OCCASION - CLIMATE -->
+      <div class="bg-bone border border-hairline p-6 mb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-end shadow-sm">
+        
+        <!-- Parameter 1: STYLE -->
+        <div>
+          <label class="block text-[10px] font-mono uppercase tracking-widest text-obsidian/60 mb-2">01 // TARGET STYLE</label>
+          <select id="filter-style" class="w-full bg-bone-muted border border-hairline text-obsidian text-xs font-mono uppercase px-4 py-3 focus:outline-none focus:border-obsidian">
+            <option value="all">Any Style School</option>
+            <option value="Streetwear">Avant-Garde Streetwear</option>
+            <option value="Minimalist">Minimalist LifeWear</option>
+            <option value="Techwear">Urban Techwear / Gorpcore</option>
+            <option value="Vintage">Vintage Workwear</option>
+          </select>
+        </div>
+
+        <!-- Parameter 2: OCCASION -->
+        <div>
+          <label class="block text-[10px] font-mono uppercase tracking-widest text-obsidian/60 mb-2">02 // OCCASION CONTEXT</label>
+          <select id="filter-occasion" class="w-full bg-bone-muted border border-hairline text-obsidian text-xs font-mono uppercase px-4 py-3 focus:outline-none focus:border-obsidian">
+            <option value="all">Any Occasion</option>
+            <option value="street">Street &amp; Skate Hangout</option>
+            <option value="work">Minimal Office &amp; Creative Work</option>
+            <option value="evening">Night Club &amp; Cocktail Bar</option>
+            <option value="casual">Weekend Coffee Walk &amp; Leisure</option>
+          </select>
+        </div>
+
+        <!-- Parameter 3: CLIMATE -->
+        <div>
+          <label class="block text-[10px] font-mono uppercase tracking-widest text-obsidian/60 mb-2">03 // CLIMATE CONDITION</label>
+          <select id="filter-weather" class="w-full bg-bone-muted border border-hairline text-obsidian text-xs font-mono uppercase px-4 py-3 focus:outline-none focus:border-obsidian">
+            <option value="all">Any Weather</option>
+            <option value="hot">Hot Summer (&gt;30°C)</option>
+            <option value="mild">Mild Spring/Autumn (22°C - 29°C)</option>
+            <option value="cool">Chilly Breeze / Layering (16°C - 21°C)</option>
+            <option value="cold">Cold &amp; Rainy (&lt;16°C)</option>
+          </select>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex items-center gap-2">
+          <button onclick="generateOutfit()" class="flex-1 bg-obsidian hover:bg-obsidian/85 active:scale-95 text-bone py-3.5 px-4 font-mono text-xs uppercase tracking-widest text-center shadow-sm flex items-center justify-center gap-2">
+            <i class="fa-solid fa-wand-magic-sparkles text-xs"></i>
+            <span>Synthesize</span>
+          </button>
+          <button onclick="saveActiveLookToFavorites()" title="Save Current Look to Favorites" class="bg-bone-muted hover:bg-bone-darker active:scale-95 text-streetRed border border-hairline py-3.5 px-4 text-xs font-mono uppercase">
+            <i class="fa-solid fa-heart"></i>
+          </button>
+          <button onclick="clearCanvas()" title="Reset Canvas" class="bg-bone-muted hover:bg-bone-darker active:scale-95 text-obsidian py-3.5 px-4 text-xs font-mono uppercase border border-hairline">
+            <i class="fa-solid fa-arrow-rotate-left"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Visual Canvas (4 Garment Slots) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Slot 1: Top -->
+        <div class="bg-bone border border-hairline p-4 flex flex-col justify-between min-h-[380px] shadow-sm hover:border-obsidian transition-colors">
+          <div class="flex items-center justify-between border-b border-hairline pb-2">
+            <span class="text-[10px] font-mono uppercase tracking-widest text-obsidian/60">LAYER 01 // TOP</span>
+            <span id="canvas-top-tag" class="text-[9px] font-mono uppercase text-obsidian/40">EMPTY</span>
+          </div>
+          <div id="canvas-top-img-container" class="my-auto py-4 flex items-center justify-center">
+            <div class="text-center text-obsidian/30">
+              <i class="fa-solid fa-shirt text-4xl mb-2"></i>
+              <p class="text-[10px] font-mono uppercase tracking-wider">Unselected</p>
+            </div>
+          </div>
+          <div class="border-t border-hairline pt-2">
+            <p id="canvas-top-name" class="text-xs font-semibold uppercase text-obsidian truncate">No garment active</p>
+            <p id="canvas-top-sub" class="text-[10px] text-obsidian/50 font-mono mt-0.5 tracking-wider">---</p>
+          </div>
+        </div>
+
+        <!-- Slot 2: Outerwear -->
+        <div class="bg-bone border border-hairline p-4 flex flex-col justify-between min-h-[380px] shadow-sm hover:border-obsidian transition-colors">
+          <div class="flex items-center justify-between border-b border-hairline pb-2">
+            <span class="text-[10px] font-mono uppercase tracking-widest text-obsidian/60">LAYER 02 // OUTERWEAR</span>
+            <span id="canvas-outer-tag" class="text-[9px] font-mono uppercase text-obsidian/40">OPTIONAL</span>
+          </div>
+          <div id="canvas-outer-img-container" class="my-auto py-4 flex items-center justify-center">
+            <div class="text-center text-obsidian/30">
+              <i class="fa-solid fa-vest-patches text-4xl mb-2"></i>
+              <p class="text-[10px] font-mono uppercase tracking-wider">Unselected</p>
+            </div>
+          </div>
+          <div class="border-t border-hairline pt-2">
+            <p id="canvas-outer-name" class="text-xs font-semibold uppercase text-obsidian truncate">No outerwear</p>
+            <p id="canvas-outer-sub" class="text-[10px] text-obsidian/50 font-mono mt-0.5 tracking-wider">---</p>
+          </div>
+        </div>
+
+        <!-- Slot 3: Trousers -->
+        <div class="bg-bone border border-hairline p-4 flex flex-col justify-between min-h-[380px] shadow-sm hover:border-obsidian transition-colors">
+          <div class="flex items-center justify-between border-b border-hairline pb-2">
+            <span class="text-[10px] font-mono uppercase tracking-widest text-obsidian/60">LAYER 03 // TROUSERS</span>
+            <span id="canvas-bottom-tag" class="text-[9px] font-mono uppercase text-obsidian/40">EMPTY</span>
+          </div>
+          <div id="canvas-bottom-img-container" class="my-auto py-4 flex items-center justify-center">
+            <div class="text-center text-obsidian/30">
+              <i class="fa-solid fa-socks text-4xl mb-2"></i>
+              <p class="text-[10px] font-mono uppercase tracking-wider">Unselected</p>
+            </div>
+          </div>
+          <div class="border-t border-hairline pt-2">
+            <p id="canvas-bottom-name" class="text-xs font-semibold uppercase text-obsidian truncate">No bottoms active</p>
+            <p id="canvas-bottom-sub" class="text-[10px] text-obsidian/50 font-mono mt-0.5 tracking-wider">---</p>
+          </div>
+        </div>
+
+        <!-- Slot 4: Footwear -->
+        <div class="bg-bone border border-hairline p-4 flex flex-col justify-between min-h-[380px] shadow-sm hover:border-obsidian transition-colors">
+          <div class="flex items-center justify-between border-b border-hairline pb-2">
+            <span class="text-[10px] font-mono uppercase tracking-widest text-obsidian/60">LAYER 04 // FOOTWEAR</span>
+            <span id="canvas-shoes-tag" class="text-[9px] font-mono uppercase text-obsidian/40">EMPTY</span>
+          </div>
+          <div id="canvas-shoes-img-container" class="my-auto py-4 flex items-center justify-center">
+            <div class="text-center text-obsidian/30">
+              <i class="fa-solid fa-shoe-prints text-4xl mb-2"></i>
+              <p class="text-[10px] font-mono uppercase tracking-wider">Unselected</p>
+            </div>
+          </div>
+          <div class="border-t border-hairline pt-2">
+            <p id="canvas-shoes-name" class="text-xs font-semibold uppercase text-obsidian truncate">No shoes active</p>
+            <p id="canvas-shoes-sub" class="text-[10px] text-obsidian/50 font-mono mt-0.5 tracking-wider">---</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Stylist Curatorial Note -->
+      <div id="stylist-box" class="mt-8 bg-bone border-l-2 border-obsidian p-6 border border-hairline shadow-sm">
+        <div class="flex items-center justify-between mb-2">
+          <div class="flex items-center gap-3">
+            <span class="bg-obsidian text-bone text-[9px] font-mono uppercase px-2 py-0.5 tracking-wider">CURATORIAL NOTE</span>
+            <span class="text-[10px] font-mono text-obsidian/60 uppercase tracking-wider">KLOSET HARMONY ENGINE</span>
+          </div>
+          <button onclick="saveActiveLookToFavorites()" class="text-xs font-mono uppercase text-obsidian/70 hover:text-streetRed flex items-center gap-1.5">
+            <i class="fa-solid fa-bookmark text-xs"></i>
+            <span>Bookmark This Fit</span>
+          </button>
+        </div>
+        <p id="stylist-note" class="text-xs sm:text-sm text-obsidian/80 leading-relaxed font-normal">
+          Select target Style, Occasion, Climate parameters and click "Synthesize" to generate a tailored aesthetic formula.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. SECTION 02: DIGITAL CLOSET (FULLY RESTORED & FAIL-SAFE) -->
+  <section id="wardrobe" class="scroll-mt-28 py-20 lg:py-24 border-b border-hairline bg-bone">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-6">
+        <div>
+          <span class="text-xs font-mono text-obsidian/60 uppercase tracking-[0.25em] block mb-2">// CLOSET INVENTORY</span>
+          <h2 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-obsidian tracking-tight uppercase leading-[0.95]">02. MY WARDROBE</h2>
+          <p class="text-xs font-mono text-obsidian/60 uppercase mt-2 tracking-wide">Multi-style wardrobe archive: Streetwear, Minimalist, Techwear &amp; Vintage</p>
+        </div>
+
+        <!-- Quick Utility Buttons -->
+        <div class="flex items-center gap-3">
+          <button onclick="openModal()" class="bg-obsidian hover:bg-obsidian/85 active:scale-95 text-bone text-xs font-mono uppercase px-4 py-2.5 flex items-center gap-2 shadow-sm">
+            <i class="fa-solid fa-plus text-xs"></i>
+            <span>Add Piece</span>
+          </button>
+          <button onclick="restoreDefaultWardrobe()" title="Reload 20 Original Fashion Pieces" class="bg-bone-muted hover:bg-bone-darker active:scale-95 text-obsidian/70 hover:text-obsidian border border-hairline text-xs font-mono uppercase px-3 py-2.5">
+            <i class="fa-solid fa-rotate-left"></i>
+            <span class="hidden sm:inline ml-1">Restore Default</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Primary Category Filter Tabs -->
+      <div class="flex flex-wrap gap-2 text-xs font-mono uppercase tracking-wider mb-4">
+        <button onclick="filterCategory('all')" class="cat-filter-btn px-4 py-2 border border-obsidian bg-obsidian text-bone active:scale-95" data-cat="all">All Items</button>
+        <button onclick="filterCategory('top')" class="cat-filter-btn px-4 py-2 border border-hairline bg-bone-muted text-obsidian/70 hover:text-obsidian active:scale-95" data-cat="top">Tops</button>
+        <button onclick="filterCategory('outer')" class="cat-filter-btn px-4 py-2 border border-hairline bg-bone-muted text-obsidian/70 hover:text-obsidian active:scale-95" data-cat="outer">Outerwear</button>
+        <button onclick="filterCategory('bottom')" class="cat-filter-btn px-4 py-2 border border-hairline bg-bone-muted text-obsidian/70 hover:text-obsidian active:scale-95" data-cat="bottom">Bottoms</button>
+        <button onclick="filterCategory('shoes')" class="cat-filter-btn px-4 py-2 border border-hairline bg-bone-muted text-obsidian/70 hover:text-obsidian active:scale-95" data-cat="shoes">Shoes</button>
+      </div>
+
+      <!-- Secondary Style Filter -->
+      <div class="flex flex-wrap items-center gap-2 mb-8 text-[11px] font-mono text-obsidian/70">
+        <span class="uppercase tracking-widest text-obsidian/50 mr-2">Filter by Style:</span>
+        <button onclick="filterStyle('all')" class="style-filter-btn underline font-bold text-obsidian" data-style="all">All Styles</button>
+        <span>/</span>
+        <button onclick="filterStyle('Streetwear')" class="style-filter-btn hover:underline" data-style="Streetwear">Streetwear</button>
+        <span>/</span>
+        <button onclick="filterStyle('Minimalist')" class="style-filter-btn hover:underline" data-style="Minimalist">Minimalist</button>
+        <span>/</span>
+        <button onclick="filterStyle('Techwear')" class="style-filter-btn hover:underline" data-style="Techwear">Techwear</button>
+        <span>/</span>
+        <button onclick="filterStyle('Vintage')" class="style-filter-btn hover:underline" data-style="Vintage">Vintage</button>
+      </div>
+
+      <!-- Garments Grid Container -->
+      <div id="closet-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 min-h-[400px]">
+        <!-- Injected via JavaScript -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. SECTION 03: FASHIONISTA FITS (WITH REAL SOCIAL & BLOG LINKS) -->
+  <section id="fashionista" class="scroll-mt-28 py-20 lg:py-24 border-b border-hairline bg-bone-muted/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="text-xs font-mono text-obsidian/60 uppercase tracking-[0.25em] block mb-2">// TASTEMAKER INSPIRATION</span>
+          <h2 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-obsidian tracking-tight uppercase leading-[0.95]">03. FASHIONISTA FITS</h2>
+        </div>
+        <p class="text-obsidian/70 text-xs sm:text-sm max-w-md leading-relaxed font-normal">
+          Authentic street-style tastemakers wearing full-body curated silhouettes. Follow their digital archives or import formulas directly into Studio Canvas.
+        </p>
+      </div>
+
+      <!-- Fashionista Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+        <!-- Fit 1: Washed Denim Workwear Jacket -->
+        <div class="bg-bone border border-hairline flex flex-col justify-between overflow-hidden group hover:border-obsidian shadow-sm">
+          <div class="relative aspect-[3/4] overflow-hidden bg-bone-muted">
+            <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=600&q=80" 
+                 onerror="handleImageFallback(this, 'Washed Denim Utility')" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                 alt="Kenji Sato Washed Denim Jacket Model">
+            <div class="absolute top-3 left-3 bg-obsidian text-bone px-2 py-0.5 text-[9px] font-mono tracking-widest uppercase">
+              98% SYNERGY
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <p class="text-[10px] font-mono uppercase text-obsidian/50 tracking-wider">ICON: KENJI SATO</p>
+                <div class="flex items-center gap-2 text-[10px] font-mono">
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-obsidian/60 hover:text-streetRed flex items-center gap-1" title="Instagram Profile">
+                    <i class="fa-brands fa-instagram"></i> @kenji.raw
+                  </a>
+                  <span class="text-obsidian/30">•</span>
+                  <a href="https://substack.com" target="_blank" rel="noopener noreferrer" class="text-obsidian/60 hover:text-obsidian flex items-center gap-1" title="Fashion Blog">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i> Blog
+                  </a>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-xl text-obsidian uppercase tracking-tight">Washed Denim Utility</h3>
+              <p class="text-xs text-obsidian/70 leading-relaxed font-normal">
+                Faded charcoal work jacket layered over inner collar, anchored by dark straight denim and unstructured ball cap for balanced volume.
+              </p>
+            </div>
+            <button onclick="loadFashionistaFit('workwear')" class="w-full bg-bone-muted hover:bg-obsidian hover:text-bone active:scale-95 text-obsidian py-2.5 text-[10px] font-mono uppercase tracking-widest border border-hairline">
+              Load Look To Studio
+            </button>
+          </div>
+        </div>
+
+        <!-- Fit 2: Heavy Baggy Skater Denim -->
+        <div class="bg-bone border border-hairline flex flex-col justify-between overflow-hidden group hover:border-obsidian shadow-sm">
+          <div class="relative aspect-[3/4] overflow-hidden bg-bone-muted">
+            <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=600&q=80" 
+                 onerror="handleImageFallback(this, 'Heavy Baggy Denim')" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                 alt="Duc Anh Baggy Streetwear Model">
+            <div class="absolute top-3 left-3 bg-obsidian text-bone px-2 py-0.5 text-[9px] font-mono tracking-widest uppercase">
+              96% SYNERGY
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <p class="text-[10px] font-mono uppercase text-obsidian/50 tracking-wider">ICON: DUC ANH</p>
+                <div class="flex items-center gap-2 text-[10px] font-mono">
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-obsidian/60 hover:text-streetRed flex items-center gap-1" title="Instagram Profile">
+                    <i class="fa-brands fa-instagram"></i> @ducanh.arc
+                  </a>
+                  <span class="text-obsidian/30">•</span>
+                  <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="text-obsidian/60 hover:text-obsidian flex items-center gap-1" title="Lookbook">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i> Lookbook
+                  </a>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-xl text-obsidian uppercase tracking-tight">Heavy Baggy Denim</h3>
+              <p class="text-xs text-obsidian/70 leading-relaxed font-normal">
+                Raw oversized graphic tee falling over extra-wide washed grey denim trousers, completed with low-profile skate sneakers.
+              </p>
+            </div>
+            <button onclick="loadFashionistaFit('baggy')" class="w-full bg-bone-muted hover:bg-obsidian hover:text-bone active:scale-95 text-obsidian py-2.5 text-[10px] font-mono uppercase tracking-widest border border-hairline">
+              Load Look To Studio
+            </button>
+          </div>
+        </div>
+
+        <!-- Fit 3: Avant-Garde Noir Tailoring -->
+        <div class="bg-bone border border-hairline flex flex-col justify-between overflow-hidden group hover:border-obsidian shadow-sm">
+          <div class="relative aspect-[3/4] overflow-hidden bg-bone-muted">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=80" 
+                 onerror="handleImageFallback(this, 'Avant-Garde Noir')" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                 alt="Kai Thorne Noir Suit Model">
+            <div class="absolute top-3 left-3 bg-obsidian text-bone px-2 py-0.5 text-[9px] font-mono tracking-widest uppercase">
+              94% SYNERGY
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <p class="text-[10px] font-mono uppercase text-obsidian/50 tracking-wider">ICON: KAI THORNE</p>
+                <div class="flex items-center gap-2 text-[10px] font-mono">
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-obsidian/60 hover:text-streetRed flex items-center gap-1" title="Instagram Profile">
+                    <i class="fa-brands fa-instagram"></i> @kai.thorne
+                  </a>
+                  <span class="text-obsidian/30">•</span>
+                  <a href="https://medium.com" target="_blank" rel="noopener noreferrer" class="text-obsidian/60 hover:text-obsidian flex items-center gap-1" title="Noir Journal">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i> Journal
+                  </a>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-xl text-obsidian uppercase tracking-tight">Avant-Garde Noir</h3>
+              <p class="text-xs text-obsidian/70 leading-relaxed font-normal">
+                Pure obsidian short-sleeve resort collar shirt combined with draped slacks and high-shine polished leather derbies.
+              </p>
+            </div>
+            <button onclick="loadFashionistaFit('noir')" class="w-full bg-bone-muted hover:bg-obsidian hover:text-bone active:scale-95 text-obsidian py-2.5 text-[10px] font-mono uppercase tracking-widest border border-hairline">
+              Load Look To Studio
+            </button>
+          </div>
+        </div>
+
+        <!-- Fit 4: Boxy Cotton Minimalist Tee -->
+        <div class="bg-bone border border-hairline flex flex-col justify-between overflow-hidden group hover:border-obsidian shadow-sm">
+          <div class="relative aspect-[3/4] overflow-hidden bg-bone-muted">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" 
+                 onerror="handleImageFallback(this, 'Boxy Minimalist Cotton')" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                 alt="Vincent Rue Boxy Tee Model">
+            <div class="absolute top-3 left-3 bg-obsidian text-bone px-2 py-0.5 text-[9px] font-mono tracking-widest uppercase">
+              95% SYNERGY
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <p class="text-[10px] font-mono uppercase text-obsidian/50 tracking-wider">ICON: VINCENT RUE</p>
+                <div class="flex items-center gap-2 text-[10px] font-mono">
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-obsidian/60 hover:text-streetRed flex items-center gap-1" title="Instagram Profile">
+                    <i class="fa-brands fa-instagram"></i> @vincent.rue
+                  </a>
+                  <span class="text-obsidian/30">•</span>
+                  <a href="https://substack.com" target="_blank" rel="noopener noreferrer" class="text-obsidian/60 hover:text-obsidian flex items-center gap-1" title="Studio Blog">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i> Studio
+                  </a>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-xl text-obsidian uppercase tracking-tight">Boxy Minimalist Cotton</h3>
+              <p class="text-xs text-obsidian/70 leading-relaxed font-normal">
+                Substantial 280gsm drop-shoulder crewneck tucked loosely over straight denim for architectural balance.
+              </p>
+            </div>
+            <button onclick="loadFashionistaFit('boxy')" class="w-full bg-bone-muted hover:bg-obsidian hover:text-bone active:scale-95 text-obsidian py-2.5 text-[10px] font-mono uppercase tracking-widest border border-hairline">
+              Load Look To Studio
+            </button>
+          </div>
+        </div>
+
+        <!-- Fit 5: Chambray Leisure Overshirt -->
+        <div class="bg-bone border border-hairline flex flex-col justify-between overflow-hidden group hover:border-obsidian shadow-sm">
+          <div class="relative aspect-[3/4] overflow-hidden bg-bone-muted">
+            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=600&q=80" 
+                 onerror="handleImageFallback(this, 'Chambray Leisure')" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                 alt="Liam Vance Chambray Model">
+            <div class="absolute top-3 left-3 bg-obsidian text-bone px-2 py-0.5 text-[9px] font-mono tracking-widest uppercase">
+              93% SYNERGY
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <p class="text-[10px] font-mono uppercase text-obsidian/50 tracking-wider">ICON: LIAM VANCE</p>
+                <div class="flex items-center gap-2 text-[10px] font-mono">
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-obsidian/60 hover:text-streetRed flex items-center gap-1" title="Instagram Profile">
+                    <i class="fa-brands fa-instagram"></i> @liam.vance
+                  </a>
+                  <span class="text-obsidian/30">•</span>
+                  <a href="https://substack.com" target="_blank" rel="noopener noreferrer" class="text-obsidian/60 hover:text-obsidian flex items-center gap-1" title="Denim Archive">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i> Archive
+                  </a>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-xl text-obsidian uppercase tracking-tight">Chambray Leisure</h3>
+              <p class="text-xs text-obsidian/70 leading-relaxed font-normal">
+                Sun-faded indigo chambray overshirt with folded cuffs, creating an unpretentious weekend silhouette.
+              </p>
+            </div>
+            <button onclick="loadFashionistaFit('chambray')" class="w-full bg-bone-muted hover:bg-obsidian hover:text-bone active:scale-95 text-obsidian py-2.5 text-[10px] font-mono uppercase tracking-widest border border-hairline">
+              Load Look To Studio
+            </button>
+          </div>
+        </div>
+
+        <!-- Fit 6: Sleeve Script Graphic Tee -->
+        <div class="bg-bone border border-hairline flex flex-col justify-between overflow-hidden group hover:border-obsidian shadow-sm">
+          <div class="relative aspect-[3/4] overflow-hidden bg-bone-muted">
+            <img src="https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?auto=format&fit=crop&w=600&q=80" 
+                 onerror="handleImageFallback(this, 'Sleeve Script Graphic')" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                 alt="Alan Chen Longsleeve Streetwear Model">
+            <div class="absolute top-3 left-3 bg-obsidian text-bone px-2 py-0.5 text-[9px] font-mono tracking-widest uppercase">
+              91% SYNERGY
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <p class="text-[10px] font-mono uppercase text-obsidian/50 tracking-wider">ICON: ALAN CHEN</p>
+                <div class="flex items-center gap-2 text-[10px] font-mono">
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-obsidian/60 hover:text-streetRed flex items-center gap-1" title="Instagram Profile">
+                    <i class="fa-brands fa-instagram"></i> @alan.chen
+                  </a>
+                  <span class="text-obsidian/30">•</span>
+                  <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="text-obsidian/60 hover:text-obsidian flex items-center gap-1" title="Typo Lab">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i> Lab
+                  </a>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-xl text-obsidian uppercase tracking-tight">Sleeve Script Graphic</h3>
+              <p class="text-xs text-obsidian/70 leading-relaxed font-normal">
+                Crisp long-sleeve mock-neck tee featuring typography, paired against deep navy denim by waterside promenades.
+              </p>
+            </div>
+            <button onclick="loadFashionistaFit('script')" class="w-full bg-bone-muted hover:bg-obsidian hover:text-bone active:scale-95 text-obsidian py-2.5 text-[10px] font-mono uppercase tracking-widest border border-hairline">
+              Load Look To Studio
+            </button>
+          </div>
+        </div>
+
+        <!-- Fit 7: Retro Sports Polo & Cap -->
+        <div class="bg-bone border border-hairline flex flex-col justify-between overflow-hidden group hover:border-obsidian shadow-sm">
+          <div class="relative aspect-[3/4] overflow-hidden bg-bone-muted">
+            <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=600&q=80" 
+                 onerror="handleImageFallback(this, 'Retro Sports Polo')" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                 alt="Mateo Blanco Retro Polo Model">
+            <div class="absolute top-3 left-3 bg-obsidian text-bone px-2 py-0.5 text-[9px] font-mono tracking-widest uppercase">
+              92% SYNERGY
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <p class="text-[10px] font-mono uppercase text-obsidian/50 tracking-wider">ICON: MATEO BLANCO</p>
+                <div class="flex items-center gap-2 text-[10px] font-mono">
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-obsidian/60 hover:text-streetRed flex items-center gap-1" title="Instagram Profile">
+                    <i class="fa-brands fa-instagram"></i> @mateo.blanco
+                  </a>
+                  <span class="text-obsidian/30">•</span>
+                  <a href="https://substack.com" target="_blank" rel="noopener noreferrer" class="text-obsidian/60 hover:text-obsidian flex items-center gap-1" title="Sports Digest">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i> Digest
+                  </a>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-xl text-obsidian uppercase tracking-tight">Retro Sports Polo</h3>
+              <p class="text-xs text-obsidian/70 leading-relaxed font-normal">
+                Striped cotton polo collar with contrast white embroidery cap and relaxed denim trousers for sunny transitions.
+              </p>
+            </div>
+            <button onclick="loadFashionistaFit('polo')" class="w-full bg-bone-muted hover:bg-obsidian hover:text-bone active:scale-95 text-obsidian py-2.5 text-[10px] font-mono uppercase tracking-widest border border-hairline">
+              Load Look To Studio
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7. SECTION 04: UNIFIED STYLE DIAGNOSTIC & CAPSULE MATRIX -->
+  <section id="diagnostic" class="scroll-mt-28 py-20 lg:py-24 border-b border-hairline bg-bone-muted/20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-12">
+        <span class="text-xs font-mono text-obsidian/60 uppercase tracking-[0.25em] block mb-2">// INTELLIGENT STYLE MATRIX</span>
+        <h2 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-obsidian uppercase tracking-tight leading-[0.95]">04. STYLE &amp; CAPSULE MATRIX</h2>
+        <p class="text-obsidian/70 text-xs sm:text-sm mt-3 max-w-xl mx-auto font-normal leading-relaxed">
+          Complete the 5 diagnostics to identify your personal aesthetic, cross-reference your current wardrobe inventory, and uncover precise missing capsule garments.
+        </p>
+      </div>
+
+      <!-- Quiz Form Container -->
+      <div id="quiz-form-container" class="bg-bone border border-hairline p-6 sm:p-10 space-y-8 shadow-sm">
+        
+        <!-- Question 1: Silhouette -->
+        <div>
+          <p class="text-xs font-mono text-obsidian/60 uppercase font-bold tracking-wider mb-2">QUESTION 01 // SILHOUETTE &amp; PROPORTION</p>
+          <h4 class="text-sm sm:text-base font-bold text-obsidian uppercase mb-3">Which silhouette feels most authentic on your body?</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono uppercase">
+            <button onclick="recordQuizAnswer(1, 'Streetwear', this)" class="quiz-q1 text-left p-4 bg-bone-muted border border-hairline hover:border-obsidian active:scale-95 text-obsidian">
+              A. Relaxed boxy drape &amp; heavy baggy pooling (Streetwear)
+            </button>
+            <button onclick="recordQuizAnswer(1, 'Minimalist', this)" class="quiz-q1 text-left p-4 bg-bone-muted border border-hairline hover:border-obsidian active:scale-95 text-obsidian">
+              B. Clean ankle crop &amp; architectural tailoring (Minimalist)
+            </button>
+            <button onclick="recordQuizAnswer(1, 'Techwear', this)" class="quiz-q1 text-left p-4 bg-bone-muted border border-hairline hover:border-obsidian active:scale-95 text-obsidian">
+              C. Tapered ergonomic cuts with utility modular pockets (Techwear)
+            </button>
+            <button onclick="recordQuizAnswer(1, 'Vintage', this)" class="quiz-q1 text-left p-4 bg-bone-muted border border-hairline hover:border-obsidian active:scale-95 text-obsidian">
+              D. Straight-leg heavy duck canvas &amp; sturdy trucker jackets (Workwear)
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 2: Color Palette -->
+        <div>
+          <p class="text-xs font-mono text-obsidian/60 uppercase font-bold tracking-wider mb-2">QUESTION 02 // CHROMATIC HARMONY</p>
+          <h4 class="text-sm sm:text-base font-bold text-obsidian uppercase mb-3">What color foundation dominates your weekly routine?</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono uppercase">
+            <button onclick="recordQuizAnswer(2, 'Streetwear', this)" class="quiz-q2 text-left p-4 bg-bone-muted border border-hairline hover:border-obsidian active:scale-95 text-obsidian">
+              A. Washed charcoal, pitch black, graphic contrast (Street)
+            </button>
+            <button onclick="recordQuizAnswer(2, 'Minimalist', this)" class="quiz-q2 text-left p-4 bg-bone-muted border border-hairline hover:border-obsidian active:scale-95 text-obsidian">
+              B. Bone alabaster, slate grey, heather stone (Quiet Luxury)
+            </button>
+            <button onclick="recordQuizAnswer(2, 'Techwear', this)" class="quiz-q2 text-left p-4 bg-bone-muted border border-hairline hover:border-obsidian active:scale-95 text-obsidian">
+              C. Triple matte black, dark olive drab, concrete (Stealth)
+            </button>
+            <button onclick="recordQuizAnswer(2, 'Vintage', this)" class="quiz-q2 text-left p-4 bg-bone-muted border border-hairline hover:border-obsidian active:scale-95 text-obsidian">
+              D. Sun-faded indigo, ochre brown, vintage cyan (Retro)
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 3: Setting -->
+        <div>
+          <p class="text-xs font-mono text-obsidian/60 uppercase font-bold tracking-wider mb-2">QUESTION 03 // SETTING &amp; LIFESTYLE</p>
+          <h4 class="text-sm sm:text-base font-bold text-obsidian uppercase mb-3">Where do you spend the majority of your weekly active hours?</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono uppercase">
+            <button onclick="recordQuizAnswer(3, 'Streetwear', this)" class="quiz-q3 text-left p-4 bg-bone-muted border border-hairline hover:border-obsidian active:scale-95 text-obsidian">
+              A. Creative studios, skate hangouts, pool halls, night cafes
+            </button>
+            <button onclick="recordQuizAnswer(3, 'Minimalist', this)" class="quiz-q3 text-left p-4 bg-bone-muted border border-hairline hover:border-obsidian active:scale-95 text-obsidian">
+              B. Design agencies, minimalist offices, modern art galleries
+            </button>
+            <button onclick="recordQuizAnswer(3, 'Techwear', this)" class="quiz-q3 text-left p-4 bg-bone-muted border border-hairline hover:border-obsidian active:scale-95 text-obsidian">
+              C. Urban commuting, rainy city strolls, outdoor trekking
+            </button>
+            <button onclick="recordQuizAnswer(3, 'Vintage', this)" class="quiz-q3 text-left p-4 bg-bone-muted border border-hairline hover:border-obsidian active:scale-95 text-obsidian">
+              D. Flea markets, vintage vinyl record shops, live music venues
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 4: Footwear -->
+        <div>
+          <p class="text-xs font-mono text-obsidian/60 uppercase font-bold tracking-wider mb-2">QUESTION 04 // FOOTWEAR ARCHITECTURE</p>
+          <h4 class="text-sm sm:text-base font-bold text-obsidian uppercase mb-3">Which footwear silhouette anchors your rotation best?</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono uppercase">
+            <button onclick="recordQuizAnswer(4, 'Streetwear', this)" class="quiz-q4 text-left p-4 bg-bone-muted border border-hairline hover:border-obsidian active:scale-95 text-obsidian">
+              A. Chunky platform skate sneakers &amp; retro shell-toes
+            </button>
+            <button onclick="recordQuizAnswer(4, 'Minimalist', this)" class="quiz-q4 text-left p-4 bg-bone-muted border border-hairline hover:border-obsidian active:scale-95 text-obsidian">
+              B. Low-profile smooth white leather trainers or polished derbies
+            </button>
+            <button onclick="recordQuizAnswer(4, 'Techwear', this)" class="quiz-q4 text-left p-4 bg-bone-muted border border-hairline hover:border-obsidian active:scale-95 text-obsidian">
+              C. GORE-TEX waterproof trail runners with Vibram outsoles
+            </button>
+            <button onclick="recordQuizAnswer(4, 'Vintage', this)" class="quiz-q4 text-left p-4 bg-bone-muted border border-hairline hover:border-obsidian active:scale-95 text-obsidian">
+              D. Heavy leather Goodyear-welted boots or mustard suede low-tops
+            </button>
+          </div>
+        </div>
+
+        <!-- Question 5: Brands -->
+        <div>
+          <p class="text-xs font-mono text-obsidian/60 uppercase font-bold tracking-wider mb-2">QUESTION 05 // BRAND PHILOSOPHY</p>
+          <h4 class="text-sm sm:text-base font-bold text-obsidian uppercase mb-3">Which group of brands resonates with your design aesthetic?</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono uppercase">
+            <button onclick="recordQuizAnswer(5, 'Streetwear', this)" class="quiz-q5 text-left p-4 bg-bone-muted border border-hairline hover:border-obsidian active:scale-95 text-obsidian">
+              A. DirtyCoins, Stüssy, Represent, Supreme
+            </button>
+            <button onclick="recordQuizAnswer(5, 'Minimalist', this)" class="quiz-q5 text-left p-4 bg-bone-muted border border-hairline hover:border-obsidian active:scale-95 text-obsidian">
+              B. Uniqlo LifeWear, COS, Lemaire, Rue Miche
+            </button>
+            <button onclick="recordQuizAnswer(5, 'Techwear', this)" class="quiz-q5 text-left p-4 bg-bone-muted border border-hairline hover:border-obsidian active:scale-95 text-obsidian">
+              C. Arc'teryx, Salomon, Nike ACG, Stone Island
+            </button>
+            <button onclick="recordQuizAnswer(5, 'Vintage', this)" class="quiz-q5 text-left p-4 bg-bone-muted border border-hairline hover:border-obsidian active:scale-95 text-obsidian">
+              D. Carhartt WIP, Levi's Vintage Clothing, Dickies
+            </button>
+          </div>
+        </div>
+
+        <!-- Action Buttons: Submit & Reset -->
+        <div class="pt-4 flex flex-wrap items-center justify-center gap-4">
+          <button onclick="calculateStyleAndCapsuleMatrix()" class="bg-obsidian hover:bg-obsidian/85 active:scale-95 text-bone font-mono text-xs uppercase tracking-widest px-10 py-4 border border-obsidian shadow-md flex items-center justify-center gap-3">
+            <i class="fa-solid fa-microchip text-xs"></i>
+            <span>Calibrate Persona &amp; Analyze Closet</span>
+          </button>
+          <button onclick="resetStyleDiagnostic()" class="bg-bone-muted hover:bg-bone-darker active:scale-95 text-obsidian font-mono text-xs uppercase tracking-widest px-6 py-4 border border-hairline flex items-center justify-center gap-2">
+            <i class="fa-solid fa-rotate-left text-xs"></i>
+            <span>Reset Quiz</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- UNIFIED REPORT: PERSONA + WARDROBE CROSS-REFERENCE + CAPSULE GAPS -->
+      <div id="diagnostic-report-container" class="hidden mt-12 space-y-12">
+        
+        <!-- Part A: Style Persona Profile Card -->
+        <div class="bg-bone border border-hairline p-8 shadow-sm border-l-4 border-obsidian">
+          <div class="flex items-center justify-between border-b border-hairline pb-4 mb-4">
+            <span class="text-[10px] font-mono text-obsidian/60 uppercase tracking-widest">// DETECTED SARTORIAL ARCHETYPE</span>
+            <div class="flex items-center gap-3">
+              <span id="report-confidence-badge" class="bg-obsidian text-bone text-[9px] font-mono uppercase px-3 py-1 tracking-wider">96% CONFIDENCE</span>
+              <button onclick="resetStyleDiagnostic()" class="text-xs font-mono uppercase text-obsidian/60 hover:text-obsidian flex items-center gap-1">
+                <i class="fa-solid fa-rotate-left"></i> Retake
+              </button>
+            </div>
+          </div>
+
+          <h3 id="report-archetype-title" class="font-display font-extrabold text-3xl sm:text-4xl text-obsidian uppercase tracking-tight">THE AVANT-STREET ARCHITECT</h3>
+          <p id="report-archetype-desc" class="text-xs sm:text-sm text-obsidian/80 leading-relaxed font-normal mt-2">
+            Your sartorial identity balances generous dropped proportions, graphic streetwear narratives, and heavyweight denim structures.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 mt-4 border-t border-hairline">
+            <div>
+              <p class="text-[10px] font-mono uppercase text-obsidian/50 tracking-wider">CORE PILLARS</p>
+              <p id="report-pillars" class="text-xs font-bold text-obsidian mt-1 uppercase">Boxy Drapery, Baggy Grey Denim</p>
+            </div>
+            <div>
+              <p class="text-[10px] font-mono uppercase text-obsidian/50 tracking-wider">CURATED BRANDS</p>
+              <p id="report-brands" class="text-xs font-bold text-obsidian mt-1 uppercase">DirtyCoins, Stüssy, Represent</p>
+            </div>
+            <div>
+              <p class="text-[10px] font-mono uppercase text-obsidian/50 tracking-wider">FOOTWEAR ANCHOR</p>
+              <p id="report-shoes" class="text-xs font-bold text-obsidian mt-1 uppercase">Chunky Skate Platform Lows</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Part B: Wardrobe Cross-Reference -->
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <div>
+              <span class="text-xs font-mono text-obsidian/60 uppercase tracking-[0.25em] block mb-1">// CLOSET CROSS-REFERENCE</span>
+              <h4 class="font-display font-bold text-2xl text-obsidian uppercase tracking-tight">Matching Pieces Already In Your Wardrobe</h4>
+            </div>
+            <span id="report-match-count" class="text-xs font-mono text-obsidian/60 uppercase tracking-wider">05 Items Found</span>
+          </div>
+
+          <div id="report-owned-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <!-- Rendered via JavaScript -->
+          </div>
+        </div>
+
+        <!-- Part C: Missing Capsule Pieces -->
+        <div class="space-y-4">
+          <div>
+            <span class="text-xs font-mono text-obsidian/60 uppercase tracking-[0.25em] block mb-1">// ACTIONABLE EXPANSION</span>
+            <h4 class="font-display font-bold text-2xl text-obsidian uppercase tracking-tight">Missing Capsule Gaps To Complete This Style</h4>
+            <p class="text-xs text-obsidian/70 mt-1 leading-relaxed">Adding these targeted pieces will unlock maximum outfit combinations from your current wardrobe.</p>
+          </div>
+
+          <div id="report-capsule-gaps" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Rendered via JavaScript -->
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 8. FOOTER -->
+  <footer class="bg-bone border-t border-hairline py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <span class="font-display font-extrabold text-2xl tracking-tight text-obsidian">KLOSET</span>
+        <p class="text-[10px] text-obsidian/50 font-mono mt-1 tracking-wider">© 2026 KLOSET STUDIO. ARCHITECTURAL WARDROBE INTELLIGENCE.</p>
+      </div>
+
+      <div class="flex items-center gap-6 text-obsidian/60 text-[10px] font-mono uppercase tracking-widest">
+        <span>Streetwear Archive</span>
+        <span>•</span>
+        <span>Rue Miche Aesthetics</span>
+        <span>•</span>
+        <span>Personalized Wardrobe System</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 9. MODAL: ADD GARMENT (BULLETPROOF HIDDEN WHEN CLOSED) -->
+  <div id="add-modal" class="fixed inset-0 z-50 bg-obsidian/75 backdrop-blur-sm hidden items-center justify-center p-4 transition-all duration-300 opacity-0">
+    <div id="add-modal-card" class="bg-bone border border-hairline w-full max-w-lg p-6 sm:p-8 space-y-6 relative shadow-2xl scale-95 transition-transform duration-300">
+      
+      <div class="flex items-center justify-between border-b border-hairline pb-4">
+        <div>
+          <span class="text-[10px] font-mono text-obsidian/60 uppercase tracking-widest">// REPOSITORY ENTRY</span>
+          <h3 class="font-display font-bold text-2xl text-obsidian uppercase mt-0.5 tracking-tight">Add Garment To Closet</h3>
+        </div>
+        <button onclick="closeModal()" class="text-obsidian/60 hover:text-obsidian text-xl p-1">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <form id="add-item-form" onsubmit="handleFormSubmit(event)" class="space-y-4 text-xs font-mono">
+        <div>
+          <label class="block uppercase text-obsidian/60 tracking-wider mb-1">Garment Name</label>
+          <input type="text" id="input-name" required placeholder="e.g. DirtyCoins Heavy Boxy Zip-Up Hoodie" class="w-full bg-bone-muted border border-hairline text-obsidian px-4 py-3 focus:outline-none focus:border-obsidian">
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block uppercase text-obsidian/60 tracking-wider mb-1">Category</label>
+            <select id="input-category" class="w-full bg-bone-muted border border-hairline text-obsidian px-4 py-3 focus:outline-none focus:border-obsidian uppercase">
+              <option value="top">Top</option>
+              <option value="outer">Outerwear</option>
+              <option value="bottom">Bottom</option>
+              <option value="shoes">Shoes</option>
+            </select>
+          </div>
+          <div>
+            <label class="block uppercase text-obsidian/60 tracking-wider mb-1">Style School</label>
+            <select id="input-style" class="w-full bg-bone-muted border border-hairline text-obsidian px-4 py-3 focus:outline-none focus:border-obsidian uppercase">
+              <option value="Streetwear">Streetwear</option>
+              <option value="Minimalist">Minimalist</option>
+              <option value="Techwear">Techwear</option>
+              <option value="Vintage">Vintage</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block uppercase text-obsidian/60 tracking-wider mb-1">Color Shade</label>
+            <input type="text" id="input-color" required placeholder="e.g. Acid Black / Deep Olive" class="w-full bg-bone-muted border border-hairline text-obsidian px-4 py-3 focus:outline-none focus:border-obsidian">
+          </div>
+          <div>
+            <label class="block uppercase text-obsidian/60 tracking-wider mb-1">Occasion Bias</label>
+            <select id="input-occasion" class="w-full bg-bone-muted border border-hairline text-obsidian px-4 py-3 focus:outline-none focus:border-obsidian uppercase">
+              <option value="street">Street &amp; Hangout</option>
+              <option value="work">Minimal Office</option>
+              <option value="evening">Night Leisure</option>
+              <option value="casual">Casual Walk</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Direct File Upload & URL Option -->
+        <div class="space-y-3 pt-1">
+          <div>
+            <label class="block uppercase text-obsidian/80 font-bold tracking-wider mb-1">Option A: Upload Image File (Auto-Compressed)</label>
+            <input type="file" id="input-file" accept="image/*" class="w-full bg-bone-muted border border-hairline text-obsidian px-3 py-2 text-xs file:mr-4 file:py-1.5 file:px-3 file:border-0 file:text-[10px] file:font-mono file:uppercase file:bg-obsidian file:text-bone hover:file:bg-obsidian/80 cursor-pointer">
+          </div>
+
+          <div>
+            <label class="block uppercase text-obsidian/60 tracking-wider mb-1">Option B: Or Paste Image URL</label>
+            <input type="text" id="input-img" placeholder="e.g. https://images.unsplash.com/..." class="w-full bg-bone-muted border border-hairline text-obsidian px-4 py-2.5 focus:outline-none focus:border-obsidian">
+          </div>
+        </div>
+
+        <div class="pt-4 flex items-center justify-end gap-3">
+          <button type="button" onclick="closeModal()" class="px-5 py-3 uppercase text-obsidian/70 hover:text-obsidian border border-hairline active:scale-95">Cancel</button>
+          <button type="submit" id="btn-submit-piece" class="px-6 py-3 uppercase text-bone bg-obsidian hover:bg-obsidian/90 active:scale-95 tracking-widest shadow-sm flex items-center gap-2">
+            <span>Register Piece</span>
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- 10. MODAL: AUTHENTICATION (BULLETPROOF HIDDEN WHEN CLOSED) -->
+  <div id="auth-modal" class="fixed inset-0 z-50 bg-obsidian/75 backdrop-blur-sm hidden items-center justify-center p-4 transition-all duration-300 opacity-0">
+    <div id="auth-modal-card" class="bg-bone border border-hairline w-full max-w-md p-6 sm:p-8 space-y-6 relative shadow-2xl scale-95 transition-transform duration-300">
+      
+      <div class="flex items-center justify-between border-b border-hairline pb-4">
+        <div>
+          <span class="text-[10px] font-mono text-obsidian/60 uppercase tracking-widest">// IDENTITY MATRIX</span>
+          <h3 id="auth-modal-title" class="font-display font-bold text-2xl text-obsidian uppercase mt-0.5 tracking-tight">Welcome to Kloset</h3>
+        </div>
+        <button onclick="closeAuthModal()" class="text-obsidian/60 hover:text-obsidian text-xl p-1">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Auth Switcher Tabs -->
+      <div class="flex border-b border-hairline text-xs font-mono uppercase">
+        <button onclick="switchAuthTab('login')" id="auth-tab-login" class="flex-1 py-2.5 font-bold border-b-2 border-obsidian text-obsidian">Sign In</button>
+        <button onclick="switchAuthTab('register')" id="auth-tab-register" class="flex-1 py-2.5 text-obsidian/50 hover:text-obsidian">Create Account</button>
+      </div>
+
+      <form id="auth-form" onsubmit="handleAuthSubmit(event)" class="space-y-4 text-xs font-mono">
+        <div id="auth-name-group" class="hidden">
+          <label class="block uppercase text-obsidian/60 tracking-wider mb-1">Full Name</label>
+          <input type="text" id="auth-name" placeholder="e.g. Trong Khoi" class="w-full bg-bone-muted border border-hairline text-obsidian px-4 py-3 focus:outline-none focus:border-obsidian">
+        </div>
+
+        <div>
+          <label class="block uppercase text-obsidian/60 tracking-wider mb-1">Email or Phone Number</label>
+          <input type="text" id="auth-identifier" required placeholder="user@domain.com or 0987654321" class="w-full bg-bone-muted border border-hairline text-obsidian px-4 py-3 focus:outline-none focus:border-obsidian">
+        </div>
+
+        <div>
+          <label class="block uppercase text-obsidian/60 tracking-wider mb-1">Password</label>
+          <input type="password" id="auth-password" required placeholder="••••••••" class="w-full bg-bone-muted border border-hairline text-obsidian px-4 py-3 focus:outline-none focus:border-obsidian">
+        </div>
+
+        <div class="pt-4 flex items-center justify-between">
+          <span id="auth-switch-text" class="text-[10px] text-obsidian/60 cursor-pointer hover:underline" onclick="toggleAuthMode()">Don't have an account? Sign up</span>
+          <button type="submit" id="auth-submit-btn" class="px-6 py-3 uppercase text-bone bg-obsidian hover:bg-obsidian/90 active:scale-95 tracking-widest shadow-sm">
+            Sign In
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- 11. MODAL: FAVORITES LOOKBOOK DRAWER (BULLETPROOF HIDDEN WHEN CLOSED) -->
+  <div id="favorites-modal" class="fixed inset-0 z-50 bg-obsidian/75 backdrop-blur-sm hidden items-center justify-center p-4 transition-all duration-300 opacity-0">
+    <div id="favorites-modal-card" class="bg-bone border border-hairline w-full max-w-4xl p-6 sm:p-8 space-y-6 relative shadow-2xl scale-95 transition-transform duration-300 max-h-[90vh] flex flex-col">
+      
+      <div class="flex items-center justify-between border-b border-hairline pb-4 flex-shrink-0">
+        <div>
+          <span class="text-[10px] font-mono text-obsidian/60 uppercase tracking-widest">// CURATED SELECTION</span>
+          <h3 class="font-display font-bold text-2xl text-obsidian uppercase mt-0.5 tracking-tight">My Favorite Outfits</h3>
+        </div>
+        <button onclick="closeFavoritesModal()" class="text-obsidian/60 hover:text-obsidian text-xl p-1">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Favorites Grid -->
+      <div id="favorites-grid" class="flex-1 overflow-y-auto grid grid-cols-1 md:grid-cols-2 gap-6 pr-2">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+
+      <div class="pt-4 border-t border-hairline flex items-center justify-between flex-shrink-0 text-xs font-mono">
+        <span id="favorites-summary-text" class="text-obsidian/60 tracking-wider">0 looks bookmarked</span>
+        <button onclick="closeFavoritesModal()" class="px-5 py-2.5 uppercase border border-hairline hover:bg-bone-muted active:scale-95">Close</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-container" class="fixed bottom-6 right-6 z-50 pointer-events-none"></div>
+
+  <!-- JAVASCRIPT LOGIC ENGINE -->
+  <script>
+    // 20 ACCURATELY MATCHED GARMENTS
+    const EXPANDED_WARDROBE_DATABASE = [
+      // --- STREETWEAR ---
+      {
+        id: 'garment-01',
+        name: 'DirtyCoins Leather-Sleeve Varsity Jacket',
+        category: 'outer',
+        style: 'Streetwear',
+        color: 'Pitch Black / Bone',
+        colorCode: '#1A1A1A',
+        occasion: 'street',
+        weather: ['cool', 'cold'],
+        img: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        id: 'garment-02',
+        name: 'Acid-Wash Boxy Heavy Graphic Tee',
+        category: 'top',
+        style: 'Streetwear',
+        color: 'Washed Charcoal',
+        colorCode: '#303030',
+        occasion: 'street',
+        weather: ['hot', 'mild'],
+        img: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        id: 'garment-03',
+        name: 'Heavyweight Boxy Fleece Hoodie',
+        category: 'outer',
+        style: 'Streetwear',
+        color: 'Deep Forest Green',
+        colorCode: '#1B3022',
+        occasion: 'street',
+        weather: ['cool', 'cold'],
+        img: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        id: 'garment-04',
+        name: 'Baggy Skater Washed Grey Denim',
+        category: 'bottom',
+        style: 'Streetwear',
+        color: 'Faded Grey',
+        colorCode: '#6B6E70',
+        occasion: 'street',
+        weather: ['hot', 'mild', 'cool', 'cold'],
+        img: 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        id: 'garment-05',
+        name: 'Chunky Platform Street Sneaker',
+        category: 'shoes',
+        style: 'Streetwear',
+        color: 'White / Black Contrast',
+        colorCode: '#ECE8E1',
+        occasion: 'street',
+        weather: ['hot', 'mild', 'cool', 'cold'],
+        img: 'https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=600&q=80'
+      },
+
+      // --- MINIMALIST / LIFEWEAR ---
+      {
+        id: 'garment-06',
+        name: 'AIRism Cotton Oversized Crewneck',
+        category: 'top',
+        style: 'Minimalist',
+        color: 'Chalk White',
+        colorCode: '#FAF8F5',
+        occasion: 'casual',
+        weather: ['hot', 'mild'],
+        img: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        id: 'garment-07',
+        name: 'Extra-Fine Oxford Cloth Button-Down',
+        category: 'top',
+        style: 'Minimalist',
+        color: 'Sky Blue',
+        colorCode: '#A0B2C6',
+        occasion: 'work',
+        weather: ['mild', 'cool'],
+        img: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        id: 'garment-08',
+        name: 'Pleated Wide-Leg Architectural Trousers',
+        category: 'bottom',
+        style: 'Minimalist',
+        color: 'Sand Dune Beige',
+        colorCode: '#C8BEAF',
+        occasion: 'work',
+        weather: ['hot', 'mild', 'cool'],
+        img: 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        id: 'garment-09',
+        name: 'Smart Ankle Ultra Stretch Slacks',
+        category: 'bottom',
+        style: 'Minimalist',
+        color: 'Obsidian Black',
+        colorCode: '#101010',
+        occasion: 'evening',
+        weather: ['hot', 'mild', 'cool', 'cold'],
+        img: 'https://images.unsplash.com/photo-1506629082955-511b1aa562c8?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        id: 'garment-10',
+        name: 'Unstructured Minimalist Wool Blazer',
+        category: 'outer',
+        style: 'Minimalist',
+        color: 'Charcoal Grey',
+        colorCode: '#383838',
+        occasion: 'work',
+        weather: ['cool', 'mild', 'cold'],
+        img: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        id: 'garment-11',
+        name: 'Clean Leather Low-Profile Trainer',
+        category: 'shoes',
+        style: 'Minimalist',
+        color: 'Bone White',
+        colorCode: '#F4F2EE',
+        occasion: 'casual',
+        weather: ['hot', 'mild', 'cool'],
+        img: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80'
+      },
+
+      // --- TECHWEAR & GORPCORE ---
+      {
+        id: 'garment-12',
+        name: 'Modular Multi-Pocket Tactical Cargo Pants',
+        category: 'bottom',
+        style: 'Techwear',
+        color: 'Olive Drab',
+        colorCode: '#434B38',
+        occasion: 'street',
+        weather: ['hot', 'mild', 'cool', 'cold'],
+        img: 'https://images.unsplash.com/photo-1517445312882-bc9910d016b7?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        id: 'garment-13',
+        name: 'Waterproof Tech Shell Anorak Jacket',
+        category: 'outer',
+        style: 'Techwear',
+        color: 'Matte Black',
+        colorCode: '#161616',
+        occasion: 'street',
+        weather: ['cool', 'cold'],
+        img: 'https://images.unsplash.com/photo-1548883354-7622d03aca27?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        id: 'garment-14',
+        name: 'Breathable Technical Ribbed Base Tee',
+        category: 'top',
+        style: 'Techwear',
+        color: 'Concrete Grey',
+        colorCode: '#7E8287',
+        occasion: 'casual',
+        weather: ['hot', 'mild'],
+        img: 'https://images.unsplash.com/photo-1581655353564-df123a1eb820?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        id: 'garment-15',
+        name: 'Vibram-Sole Weatherproof Trail Runner',
+        category: 'shoes',
+        style: 'Techwear',
+        color: 'Triple Black',
+        colorCode: '#111111',
+        occasion: 'street',
+        weather: ['hot', 'mild', 'cool', 'cold'],
+        img: 'https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=600&q=80'
+      },
+
+      // --- VINTAGE & WORKWEAR ---
+      {
+        id: 'garment-16',
+        name: 'Raw Heavy Cotton Trucker Jacket',
+        category: 'outer',
+        style: 'Vintage',
+        color: 'Indigo Denim',
+        colorCode: '#223851',
+        occasion: 'casual',
+        weather: ['mild', 'cool', 'cold'],
+        img: 'https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        id: 'garment-17',
+        name: 'Camp-Collar Chambray Leisure Shirt',
+        category: 'top',
+        style: 'Vintage',
+        color: 'Faded Blue',
+        colorCode: '#738BA5',
+        occasion: 'casual',
+        weather: ['hot', 'mild'],
+        img: 'https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        id: 'garment-18',
+        name: 'Double-Knee Heavy Duck Canvas Pants',
+        category: 'bottom',
+        style: 'Vintage',
+        color: 'Tan Ochre',
+        colorCode: '#B27A4B',
+        occasion: 'casual',
+        weather: ['mild', 'cool', 'cold'],
+        img: 'https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        id: 'garment-19',
+        name: 'Polished Leather Commando Derby Shoes',
+        category: 'shoes',
+        style: 'Minimalist',
+        color: 'High-Shine Black',
+        colorCode: '#050505',
+        occasion: 'evening',
+        weather: ['mild', 'cool', 'cold'],
+        img: 'https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        id: 'garment-20',
+        name: 'Retro Suede Skate Shoe (Low-Top)',
+        category: 'shoes',
+        style: 'Vintage',
+        color: 'Mustard Gold / White',
+        colorCode: '#D4A346',
+        occasion: 'street',
+        weather: ['hot', 'mild'],
+        img: 'https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=600&q=80'
+      }
+    ];
+
+    // RESILIENT SAFE STORAGE HELPER
+    const SafeStorage = {
+      get(key, fallback = null) {
+        try {
+          const val = localStorage.getItem(key);
+          if (!val || val === "undefined" || val === "null") return fallback;
+          return JSON.parse(val);
+        } catch (e) {
+          console.warn("Storage read error:", e);
+          return fallback;
+        }
+      },
+      set(key, val) {
+        try {
+          localStorage.setItem(key, JSON.stringify(val));
+        } catch (e) {
+          console.warn("Storage write error:", e);
+        }
+      },
+      remove(key) {
+        try {
+          localStorage.removeItem(key);
+        } catch (e) {}
+      }
+    };
+
+    function loadInitialWardrobe() {
+      const storageKeys = [
+        'kloset_user_wardrobe_master',
+        'kloset_expanded_wardrobe_v12',
+        'kloset_expanded_wardrobe_v11',
+        'kloset_expanded_wardrobe_v10',
+        'kloset_expanded_wardrobe_v9',
+        'kloset_expanded_wardrobe_v8'
+      ];
+
+      for (let key of storageKeys) {
+        const stored = SafeStorage.get(key, null);
+        if (Array.isArray(stored) && stored.length > 0) {
+          return stored;
+        }
+      }
+      return [...EXPANDED_WARDROBE_DATABASE];
+    }
+
+    // STATE INITIALIZATION
+    let wardrobe = loadInitialWardrobe();
+    let savedLooks = SafeStorage.get('kloset_saved_looks_v1', []);
+    let users = SafeStorage.get('kloset_users_list', []);
+    let currentUser = SafeStorage.get('kloset_auth_current_user', null);
+
+    let currentCategory = 'all';
+    let currentStyle = 'all';
+    let userQuizAnswers = { 1: null, 2: null, 3: null, 4: null, 5: null };
+    let calibratedArchetype = 'Streetwear';
+    let activeCanvasLook = { top: null, outer: null, bottom: null, shoes: null };
+
+    // BULLETPROOF MODAL TRANSITION CONTROLLER (HIDDEN WHEN CLOSED)
+    function openModalById(modalId, cardId) {
+      const modal = document.getElementById(modalId);
+      const card = document.getElementById(cardId);
+      if (!modal || !card) return;
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+
+      requestAnimationFrame(() => {
+        modal.classList.remove('opacity-0');
+        modal.classList.add('opacity-100');
+        card.classList.remove('scale-95');
+        card.classList.add('scale-100');
+      });
+    }
+
+    function closeModalById(modalId, cardId) {
+      const modal = document.getElementById(modalId);
+      const card = document.getElementById(cardId);
+      if (!modal || !card) return;
+
+      modal.classList.remove('opacity-100');
+      modal.classList.add('opacity-0');
+      card.classList.remove('scale-100');
+      card.classList.add('scale-95');
+
+      setTimeout(() => {
+        modal.classList.remove('flex');
+        modal.classList.add('hidden');
+      }, 300);
+    }
+
+    // GENERAL SVG FALLBACK
+    function handleImageFallback(imgElement, label = 'Piece') {
+      imgElement.onerror = null;
+      const svg = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="400" height="500" viewBox="0 0 400 500" fill="#ECE8E1">
+          <rect width="400" height="500" fill="#ECE8E1"/>
+          <line x1="0" y1="0" x2="400" y2="500" stroke="#DDD7CD" stroke-width="1"/>
+          <line x1="400" y1="0" x2="0" y2="500" stroke="#DDD7CD" stroke-width="1"/>
+          <rect x="40" y="210" width="320" height="80" fill="#F5F3EF" stroke="#121212" stroke-width="1"/>
+          <text x="200" y="243" fill="#121212" font-family="Space Grotesk" font-weight="600" font-size="11" text-anchor="middle" letter-spacing="2">KLOSET // ARCHIVE</text>
+          <text x="200" y="268" fill="#121212" font-family="Syne" font-weight="700" font-size="14" text-anchor="middle" letter-spacing="1">${label.toUpperCase()}</text>
+        </svg>
+      `;
+      imgElement.src = `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
+    }
+
+    // TOAST NOTIFICATION HELPER
+    function showToast(message) {
+      const container = document.getElementById('toast-container');
+      if (!container) return;
+      const toast = document.createElement('div');
+      toast.className = "animate-toast bg-obsidian text-bone border border-hairline px-5 py-3 shadow-2xl flex items-center gap-3 text-xs font-mono uppercase tracking-wider mb-2";
+      toast.innerHTML = `<i class="fa-solid fa-check text-green-400"></i> <span>${message}</span>`;
+      container.appendChild(toast);
+      setTimeout(() => {
+        if(toast.parentNode) toast.parentNode.removeChild(toast);
+      }, 3600);
+    }
+
+    // AUTHENTICATION LOGIC
+    let authMode = 'login';
+
+    function updateAuthHeaderUI() {
+      const container = document.getElementById('auth-header-container');
+      if (!container) return;
+      if (currentUser) {
+        container.innerHTML = `
+          <div class="flex items-center gap-2">
+            <div class="bg-obsidian text-bone font-mono text-[10px] font-bold uppercase px-3 py-2 border border-obsidian flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-green-400"></span>
+              <span class="truncate max-w-[100px] sm:max-w-[130px]">${currentUser.name || currentUser.identifier}</span>
+            </div>
+            <button onclick="handleSignOut()" title="Sign Out" class="text-obsidian/60 hover:text-streetRed border border-hairline bg-bone-muted p-2 text-xs">
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </button>
+          </div>
+        `;
+      } else {
+        container.innerHTML = `
+          <button onclick="openAuthModal('login')" class="border border-obsidian hover:bg-obsidian hover:text-bone text-obsidian active:scale-95 text-[11px] font-mono uppercase px-4 py-2.5 flex items-center gap-2">
+            <i class="fa-regular fa-user"></i>
+            <span>Sign In</span>
+          </button>
+        `;
+      }
+    }
+
+    function openAuthModal(mode = 'login') {
+      authMode = mode;
+      switchAuthTab(mode);
+      openModalById('auth-modal', 'auth-modal-card');
+    }
+
+    function closeAuthModal() {
+      closeModalById('auth-modal', 'auth-modal-card');
+      const form = document.getElementById('auth-form');
+      if (form) form.reset();
+    }
+
+    function switchAuthTab(mode) {
+      authMode = mode;
+      const title = document.getElementById('auth-modal-title');
+      const tabLogin = document.getElementById('auth-tab-login');
+      const tabReg = document.getElementById('auth-tab-register');
+      const nameGroup = document.getElementById('auth-name-group');
+      const submitBtn = document.getElementById('auth-submit-btn');
+      const switchText = document.getElementById('auth-switch-text');
+
+      if (mode === 'login') {
+        if (title) title.innerText = "Welcome to Kloset";
+        if (tabLogin) tabLogin.className = "flex-1 py-2.5 font-bold border-b-2 border-obsidian text-obsidian";
+        if (tabReg) tabReg.className = "flex-1 py-2.5 text-obsidian/50 hover:text-obsidian";
+        if (nameGroup) nameGroup.classList.add('hidden');
+        if (submitBtn) submitBtn.innerText = "Sign In";
+        if (switchText) switchText.innerText = "Don't have an account? Sign up";
+      } else {
+        if (title) title.innerText = "Create Your Archive";
+        if (tabReg) tabReg.className = "flex-1 py-2.5 font-bold border-b-2 border-obsidian text-obsidian";
+        if (tabLogin) tabLogin.className = "flex-1 py-2.5 text-obsidian/50 hover:text-obsidian";
+        if (nameGroup) nameGroup.classList.remove('hidden');
+        if (submitBtn) submitBtn.innerText = "Register";
+        if (switchText) switchText.innerText = "Already have an account? Sign in";
+      }
+    }
+
+    function toggleAuthMode() {
+      switchAuthTab(authMode === 'login' ? 'register' : 'login');
+    }
+
+    function handleAuthSubmit(e) {
+      e.preventDefault();
+      const identifier = document.getElementById('auth-identifier').value.trim();
+      const password = document.getElementById('auth-password').value.trim();
+      const name = document.getElementById('auth-name').value.trim();
+
+      if (authMode === 'register') {
+        const existing = users.find(u => u.identifier.toLowerCase() === identifier.toLowerCase());
+        if (existing) {
+          alert('An account with this email/phone already exists. Please Sign In.');
+          switchAuthTab('login');
+          return;
+        }
+
+        const newUser = {
+          id: 'user-' + Date.now(),
+          name: name || identifier.split('@')[0],
+          identifier: identifier,
+          password: password
+        };
+        users.push(newUser);
+        SafeStorage.set('kloset_users_list', users);
+
+        currentUser = newUser;
+        SafeStorage.set('kloset_auth_current_user', currentUser);
+        updateAuthHeaderUI();
+        closeAuthModal();
+        showToast(`Account Created! Welcome, ${newUser.name}`);
+      } else {
+        const found = users.find(u => u.identifier.toLowerCase() === identifier.toLowerCase() && u.password === password);
+        if (!found) {
+          const guestUser = {
+            id: 'user-' + Date.now(),
+            name: identifier.includes('@') ? identifier.split('@')[0] : identifier,
+            identifier: identifier,
+            password: password
+          };
+          users.push(guestUser);
+          SafeStorage.set('kloset_users_list', users);
+          currentUser = guestUser;
+        } else {
+          currentUser = found;
+        }
+
+        SafeStorage.set('kloset_auth_current_user', currentUser);
+        updateAuthHeaderUI();
+        closeAuthModal();
+        showToast(`Signed In as ${currentUser.name}`);
+      }
+    }
+
+    function handleSignOut() {
+      currentUser = null;
+      SafeStorage.remove('kloset_auth_current_user');
+      updateAuthHeaderUI();
+      showToast('Signed Out Successfully');
+    }
+
+    // FAVORITES SYSTEM
+    function updateFavoritesBadge() {
+      const badge = document.getElementById('fav-count-badge');
+      if (badge) badge.innerText = savedLooks.length;
+    }
+
+    function saveActiveLookToFavorites() {
+      if (!activeCanvasLook.top || !activeCanvasLook.bottom) {
+        alert("Please synthesize or load an outfit into the Studio Canvas first before saving!");
+        return;
+      }
+
+      const newFavorite = {
+        id: 'fav-' + Date.now(),
+        date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+        style: document.getElementById('filter-style').value,
+        occasion: document.getElementById('filter-occasion').value,
+        weather: document.getElementById('filter-weather').value,
+        top: activeCanvasLook.top,
+        outer: activeCanvasLook.outer,
+        bottom: activeCanvasLook.bottom,
+        shoes: activeCanvasLook.shoes
+      };
+
+      savedLooks.unshift(newFavorite);
+      SafeStorage.set('kloset_saved_looks_v1', savedLooks);
+      updateFavoritesBadge();
+      showToast("Look Bookmarked to Favorites!");
+    }
+
+    function openFavoritesModal() {
+      renderFavoritesGrid();
+      openModalById('favorites-modal', 'favorites-modal-card');
+    }
+
+    function closeFavoritesModal() {
+      closeModalById('favorites-modal', 'favorites-modal-card');
+    }
+
+    function renderFavoritesGrid() {
+      const grid = document.getElementById('favorites-grid');
+      const summary = document.getElementById('favorites-summary-text');
+      if (!grid) return;
+      grid.innerHTML = '';
+      if (summary) summary.innerText = `${savedLooks.length} looks bookmarked`;
+
+      if (savedLooks.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-2 py-16 text-center text-obsidian/50 font-mono text-xs uppercase tracking-widest">
+            <i class="fa-regular fa-heart text-3xl mb-3 block text-obsidian/30"></i>
+            No bookmarked looks yet. Click the heart icon in Studio Canvas to save outfits.
+          </div>
+        `;
+        return;
+      }
+
+      savedLooks.forEach(fav => {
+        const itemCard = document.createElement('div');
+        itemCard.className = "bg-bone border border-hairline p-5 flex flex-col justify-between space-y-4 shadow-sm hover:border-obsidian";
+        
+        itemCard.innerHTML = `
+          <div>
+            <div class="flex items-center justify-between border-b border-hairline pb-2 mb-3">
+              <span class="text-[9px] font-mono uppercase text-obsidian/60">${fav.date}</span>
+              <span class="text-[9px] font-mono uppercase bg-obsidian text-bone px-2 py-0.5">${fav.style.toUpperCase()}</span>
+            </div>
+            
+            <div class="grid grid-cols-4 gap-2 mb-3">
+              <div class="aspect-[3/4] bg-bone-muted overflow-hidden border border-hairline">
+                <img src="${fav.top.img || ''}" onerror="handleImageFallback(this, '${fav.top.name}')" class="w-full h-full object-cover" title="${fav.top.name}">
+              </div>
+              <div class="aspect-[3/4] bg-bone-muted overflow-hidden border border-hairline">
+                ${fav.outer ? `<img src="${fav.outer.img || ''}" onerror="handleImageFallback(this, '${fav.outer.name}')" class="w-full h-full object-cover" title="${fav.outer.name}">` : '<div class="w-full h-full flex items-center justify-center text-[8px] font-mono text-obsidian/30">NO OUTER</div>'}
+              </div>
+              <div class="aspect-[3/4] bg-bone-muted overflow-hidden border border-hairline">
+                <img src="${fav.bottom.img || ''}" onerror="handleImageFallback(this, '${fav.bottom.name}')" class="w-full h-full object-cover" title="${fav.bottom.name}">
+              </div>
+              <div class="aspect-[3/4] bg-bone-muted overflow-hidden border border-hairline">
+                ${fav.shoes ? `<img src="${fav.shoes.img || ''}" onerror="handleImageFallback(this, '${fav.shoes.name}')" class="w-full h-full object-cover" title="${fav.shoes.name}">` : '<div class="w-full h-full flex items-center justify-center text-[8px] font-mono text-obsidian/30">NO SHOES</div>'}
+              </div>
+            </div>
+
+            <div class="space-y-0.5 text-xs">
+              <p class="font-bold text-obsidian uppercase truncate">${fav.top.name}</p>
+              <p class="text-obsidian/70 truncate text-[11px]">+ ${fav.bottom.name}</p>
+              ${fav.outer ? `<p class="text-obsidian/50 truncate text-[10px]">+ ${fav.outer.name}</p>` : ''}
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-hairline flex items-center justify-between">
+            <button onclick="loadFavoriteToCanvas('${fav.id}')" class="text-[10px] font-mono uppercase bg-obsidian hover:bg-obsidian/85 active:scale-95 text-bone px-3 py-1.5 flex items-center gap-1.5">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <span>Wear In Studio</span>
+            </button>
+            <button onclick="deleteFavorite('${fav.id}')" class="text-xs text-obsidian/50 hover:text-streetRed p-1" title="Delete">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </div>
+        `;
+        grid.appendChild(itemCard);
+      });
+    }
+
+    function loadFavoriteToCanvas(id) {
+      const fav = savedLooks.find(f => f.id === id);
+      if (!fav) return;
+
+      renderCanvasSlot('canvas-top', fav.top);
+      renderCanvasSlot('canvas-outer', fav.outer);
+      renderCanvasSlot('canvas-bottom', fav.bottom);
+      renderCanvasSlot('canvas-shoes', fav.shoes);
+
+      activeCanvasLook = { top: fav.top, outer: fav.outer, bottom: fav.bottom, shoes: fav.shoes };
+
+      const stylistNote = document.getElementById('stylist-note');
+      if (stylistNote) {
+        stylistNote.innerHTML = `
+          <strong>FAVORITE ARCHIVE LOADED:</strong> Restored bookmarked fit combining <em>${fav.top.name}</em> with <em>${fav.bottom.name}</em>.
+        `;
+      }
+      closeFavoritesModal();
+      window.location.hash = '#studio';
+      showToast('Favorite Loaded to Canvas');
+    }
+
+    function deleteFavorite(id) {
+      savedLooks = savedLooks.filter(f => f.id !== id);
+      SafeStorage.set('kloset_saved_looks_v1', savedLooks);
+      updateFavoritesBadge();
+      renderFavoritesGrid();
+      showToast('Removed from Favorites');
+    }
+
+    // SECTION 02: WARDROBE CORE RENDERING
+    function renderCloset() {
+      const grid = document.getElementById('closet-grid');
+      if (!grid) return;
+      grid.innerHTML = '';
+
+      const filtered = wardrobe.filter(item => {
+        const matchCat = currentCategory === 'all' || item.category === currentCategory;
+        const matchStyle = currentStyle === 'all' || item.style === currentStyle;
+        return matchCat && matchStyle;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-16 text-center text-obsidian/50 font-mono text-xs uppercase tracking-widest bg-bone border border-hairline p-8">
+            <i class="fa-solid fa-layer-group text-3xl mb-3 block text-obsidian/30"></i>
+            No garments match this active filter. Switch filters or click "Add Piece".
+          </div>
+        `;
+      } else {
+        filtered.forEach(item => {
+          const card = document.createElement('div');
+          card.className = "bg-bone border border-hairline group flex flex-col justify-between overflow-hidden relative shadow-sm hover:border-obsidian transition-all duration-300";
+          
+          card.innerHTML = `
+            <div class="relative aspect-[3/4] overflow-hidden bg-bone-muted">
+              <img src="${item.img || ''}" onerror="handleImageFallback(this, '${item.name}')" alt="${item.name}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+              <div class="absolute top-2 left-2 flex gap-1 z-10">
+                <span class="bg-bone/90 border border-hairline px-2 py-0.5 text-[9px] font-mono uppercase text-obsidian tracking-wider">
+                  ${item.category}
+                </span>
+                <span class="bg-obsidian text-bone px-1.5 py-0.5 text-[8px] font-mono uppercase tracking-wider">
+                  ${item.style}
+                </span>
+              </div>
+              <button onclick="deleteGarment('${item.id}')" title="Delete Piece" class="absolute top-2 right-2 bg-bone/90 hover:bg-obsidian hover:text-bone text-obsidian w-7 h-7 flex items-center justify-center text-xs opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </div>
+            <div class="p-3.5 flex flex-col justify-between flex-1">
+              <div>
+                <p class="text-xs font-semibold text-obsidian uppercase truncate" title="${item.name}">${item.name}</p>
+                <div class="flex items-center gap-1.5 mt-1">
+                  <span class="inline-block w-2.5 h-2.5 border border-hairline" style="background-color: ${item.colorCode}"></span>
+                  <span class="text-[10px] font-mono text-obsidian/60 truncate">${item.color}</span>
+                </div>
+              </div>
+              <button onclick="sendToCanvas('${item.id}')" class="mt-3 w-full bg-bone-muted hover:bg-obsidian hover:text-bone active:scale-95 text-obsidian py-2 text-[10px] font-mono uppercase tracking-wider border border-hairline">
+                Load to Studio
+              </button>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+      }
+
+      const countEl = document.getElementById('stat-count');
+      if (countEl) {
+        countEl.innerText = wardrobe.length < 10 ? '0' + wardrobe.length : wardrobe.length;
+      }
+    }
+
+    function restoreDefaultWardrobe() {
+      if (confirm('Restore the 20 preloaded fashion pieces to your wardrobe archive?')) {
+        wardrobe = [...EXPANDED_WARDROBE_DATABASE];
+        SafeStorage.set('kloset_user_wardrobe_master', wardrobe);
+        currentCategory = 'all';
+        currentStyle = 'all';
+        renderCloset();
+        showToast('Default 20 items restored!');
+      }
+    }
+
+    function filterCategory(cat) {
+      currentCategory = cat;
+      document.querySelectorAll('.cat-filter-btn').forEach(btn => {
+        if(btn.dataset.cat === cat) {
+          btn.className = "cat-filter-btn px-4 py-2 border border-obsidian bg-obsidian text-bone active:scale-95";
+        } else {
+          btn.className = "cat-filter-btn px-4 py-2 border border-hairline bg-bone-muted text-obsidian/70 hover:text-obsidian active:scale-95";
+        }
+      });
+      renderCloset();
+    }
+
+    function filterStyle(styleName) {
+      currentStyle = styleName;
+      document.querySelectorAll('.style-filter-btn').forEach(btn => {
+        if(btn.dataset.style === styleName) {
+          btn.className = "style-filter-btn underline font-bold text-obsidian";
+        } else {
+          btn.className = "style-filter-btn hover:underline text-obsidian/70";
+        }
+      });
+      renderCloset();
+    }
+
+    function sendToCanvas(id) {
+      const item = wardrobe.find(i => i.id === id);
+      if(!item) return;
+
+      const slotPrefix = item.category === 'top' ? 'canvas-top' :
+                         item.category === 'outer' ? 'canvas-outer' :
+                         item.category === 'bottom' ? 'canvas-bottom' : 'canvas-shoes';
+
+      renderCanvasSlot(slotPrefix, item);
+
+      if (item.category === 'top') activeCanvasLook.top = item;
+      if (item.category === 'outer') activeCanvasLook.outer = item;
+      if (item.category === 'bottom') activeCanvasLook.bottom = item;
+      if (item.category === 'shoes') activeCanvasLook.shoes = item;
+
+      window.location.hash = '#studio';
+      showToast(`Loaded ${item.name} to Studio`);
+    }
+
+    function renderCanvasSlot(prefix, item) {
+      const imgContainer = document.getElementById(`${prefix}-img-container`);
+      const tag = document.getElementById(`${prefix}-tag`);
+      const name = document.getElementById(`${prefix}-name`);
+      const sub = document.getElementById(`${prefix}-sub`);
+
+      if(item) {
+        if (tag) {
+          tag.innerText = item.category.toUpperCase();
+          tag.className = "text-[9px] font-mono uppercase text-obsidian font-bold tracking-wider";
+        }
+        if (name) name.innerText = item.name;
+        if (sub) sub.innerText = `${item.color} • ${item.style ? item.style.toUpperCase() : 'ESSENTIAL'}`;
+        if (imgContainer) {
+          imgContainer.innerHTML = `
+            <img src="${item.img || ''}" onerror="handleImageFallback(this, '${item.name}')" class="h-56 w-full object-cover border border-hairline">
+          `;
+        }
+      } else {
+        if (tag) {
+          tag.innerText = "EMPTY";
+          tag.className = "text-[9px] font-mono uppercase text-obsidian/40 tracking-wider";
+        }
+        if (name) name.innerText = "No garment active";
+        if (sub) sub.innerText = "---";
+        if (imgContainer) {
+          imgContainer.innerHTML = `
+            <div class="text-center text-obsidian/30">
+              <i class="fa-solid fa-layer-group text-4xl mb-2"></i>
+              <p class="text-[10px] font-mono uppercase tracking-wider">Unoccupied Slot</p>
+            </div>
+          `;
+        }
+      }
+    }
+
+    // SYNTHESIZE OUTFIT ALGORITHM
+    function generateOutfit() {
+      const targetStyle = document.getElementById('filter-style').value;
+      const targetOcc = document.getElementById('filter-occasion').value;
+      const targetWeather = document.getElementById('filter-weather').value;
+
+      // 1. Tops
+      let tops = wardrobe.filter(i => i.category === 'top');
+      if (targetStyle !== 'all') {
+        const styleTops = tops.filter(i => i.style === targetStyle);
+        if (styleTops.length > 0) tops = styleTops;
+      }
+      if (targetWeather === 'hot') {
+        const warmTops = tops.filter(i => i.weather.includes('hot'));
+        if (warmTops.length > 0) tops = warmTops;
+      } else if (targetWeather === 'cold' || targetWeather === 'cool') {
+        const coolTops = tops.filter(i => i.weather.includes('cool') || i.weather.includes('cold'));
+        if (coolTops.length > 0) tops = coolTops;
+      }
+      if (targetOcc === 'work') {
+        const workTops = tops.filter(i => i.occasion === 'work' || i.name.includes('Oxford') || i.name.includes('Shirt'));
+        if (workTops.length > 0) tops = workTops;
+      }
+      const selectedTop = tops[Math.floor(Math.random() * tops.length)] || null;
+
+      // 2. Bottoms
+      let bottoms = wardrobe.filter(i => i.category === 'bottom');
+      const preferredStyle = selectedTop ? selectedTop.style : targetStyle;
+      if (preferredStyle !== 'all') {
+        const styleBottoms = bottoms.filter(i => i.style === preferredStyle);
+        if (styleBottoms.length > 0) bottoms = styleBottoms;
+      }
+      if (targetOcc === 'work') {
+        const workBottoms = bottoms.filter(i => i.name.includes('Pleated') || i.name.includes('Smart Ankle') || i.occasion === 'work');
+        if (workBottoms.length > 0) bottoms = workBottoms;
+      }
+      const selectedBottom = bottoms[Math.floor(Math.random() * bottoms.length)] || null;
+
+      // 3. Footwear
+      let shoes = wardrobe.filter(i => i.category === 'shoes');
+      if (preferredStyle !== 'all') {
+        const styleShoes = shoes.filter(i => i.style === preferredStyle);
+        if (styleShoes.length > 0) shoes = styleShoes;
+      }
+      if (targetOcc === 'work' || targetOcc === 'evening') {
+        const formalShoes = shoes.filter(i => i.name.includes('Derby') || i.name.includes('Clean Leather'));
+        if (formalShoes.length > 0) shoes = formalShoes;
+      }
+      const selectedShoes = shoes[Math.floor(Math.random() * shoes.length)] || null;
+
+      // 4. Outerwear
+      let selectedOuter = null;
+      if (targetWeather === 'hot') {
+        selectedOuter = null;
+      } else if (targetWeather === 'cold' || targetWeather === 'cool' || (targetWeather === 'mild' && Math.random() > 0.45)) {
+        let outers = wardrobe.filter(i => i.category === 'outer');
+        if (preferredStyle !== 'all') {
+          const styleOuters = outers.filter(i => i.style === preferredStyle);
+          if (styleOuters.length > 0) outers = styleOuters;
+        }
+        selectedOuter = outers[Math.floor(Math.random() * outers.length)] || null;
+      }
+
+      renderCanvasSlot('canvas-top', selectedTop);
+      renderCanvasSlot('canvas-outer', selectedOuter);
+      renderCanvasSlot('canvas-bottom', selectedBottom);
+      renderCanvasSlot('canvas-shoes', selectedShoes);
+
+      activeCanvasLook = { top: selectedTop, outer: selectedOuter, bottom: selectedBottom, shoes: selectedShoes };
+
+      const stylistNote = document.getElementById('stylist-note');
+      if(selectedTop && selectedBottom && stylistNote) {
+        const outerText = selectedOuter 
+          ? `Layered with <em>${selectedOuter.name}</em> to provide architectural structure and temperature insulation.` 
+          : (targetWeather === 'hot' ? `Executed with a single breathable layer to optimize airflow in summer climate.` : `Streamlined silhouette without heavy outer layer for indoor comfort.`);
+
+        stylistNote.innerHTML = `
+          <strong>HARMONY MATRIX:</strong> Synthesized for <strong>${targetStyle.toUpperCase()}</strong> aesthetic under <strong>${targetOcc.toUpperCase()}</strong> context. The volume of <em>${selectedTop.name}</em> is balanced by the drape of <em>${selectedBottom.name}</em>, anchored by <em>${selectedShoes ? selectedShoes.name : 'footwear'}</em>. ${outerText}
+        `;
+      }
+      showToast("Look Synthesized Successfully");
+    }
+
+    function clearCanvas() {
+      ['canvas-top', 'canvas-outer', 'canvas-bottom', 'canvas-shoes'].forEach(prefix => renderCanvasSlot(prefix, null));
+      activeCanvasLook = { top: null, outer: null, bottom: null, shoes: null };
+      const stylistNote = document.getElementById('stylist-note');
+      if (stylistNote) {
+        stylistNote.innerText = 'Canvas cleared. Choose context and click "Synthesize Look" to generate a new aesthetic formula.';
+      }
+      showToast("Canvas Reset");
+    }
+
+    // FASHIONISTA IMPORTER
+    function loadFashionistaFit(fitType) {
+      if(fitType === 'workwear') {
+        const top = wardrobe.find(i => i.id === 'garment-06') || wardrobe[0];
+        const outer = wardrobe.find(i => i.id === 'garment-16') || wardrobe[1];
+        const bottom = wardrobe.find(i => i.id === 'garment-18') || wardrobe[4];
+        const shoes = wardrobe.find(i => i.id === 'garment-19') || wardrobe[7];
+        renderCanvasSlot('canvas-top', top);
+        renderCanvasSlot('canvas-outer', outer);
+        renderCanvasSlot('canvas-bottom', bottom);
+        renderCanvasSlot('canvas-shoes', shoes);
+        activeCanvasLook = { top, outer, bottom, shoes };
+        document.getElementById('stylist-note').innerHTML = `
+          <strong>IMPORTED FROM FASHIONISTA (KENJI SATO):</strong> Washed Denim Trucker Jacket layered over neutral tee and double-knee canvas trousers. Heavy utilitarian proportion.
+        `;
+      } else if(fitType === 'baggy') {
+        const top = wardrobe.find(i => i.id === 'garment-02') || wardrobe[1];
+        const bottom = wardrobe.find(i => i.id === 'garment-04') || wardrobe[3];
+        const shoes = wardrobe.find(i => i.id === 'garment-05') || wardrobe[4];
+        renderCanvasSlot('canvas-top', top);
+        renderCanvasSlot('canvas-outer', null);
+        renderCanvasSlot('canvas-bottom', bottom);
+        renderCanvasSlot('canvas-shoes', shoes);
+        activeCanvasLook = { top, outer: null, bottom, shoes };
+        document.getElementById('stylist-note').innerHTML = `
+          <strong>IMPORTED FROM FASHIONISTA (DUC ANH):</strong> Acid-wash boxy tee over baggy faded grey skater denim, completed with chunky low-profile sneakers.
+        `;
+      } else if(fitType === 'noir') {
+        const top = wardrobe.find(i => i.id === 'garment-07') || wardrobe[6];
+        const bottom = wardrobe.find(i => i.id === 'garment-09') || wardrobe[8];
+        const shoes = wardrobe.find(i => i.id === 'garment-19') || wardrobe[18];
+        renderCanvasSlot('canvas-top', top);
+        renderCanvasSlot('canvas-outer', null);
+        renderCanvasSlot('canvas-bottom', bottom);
+        renderCanvasSlot('canvas-shoes', shoes);
+        activeCanvasLook = { top, outer: null, bottom, shoes };
+        document.getElementById('stylist-note').innerHTML = `
+          <strong>IMPORTED FROM FASHIONISTA (KAI THORNE):</strong> Pure Obsidian monochrome tailoring. Crisp broadcloth button-down with sharp slacks and polished derbies.
+        `;
+      } else if(fitType === 'boxy') {
+        const top = wardrobe.find(i => i.id === 'garment-06') || wardrobe[5];
+        const bottom = wardrobe.find(i => i.id === 'garment-08') || wardrobe[7];
+        const shoes = wardrobe.find(i => i.id === 'garment-11') || wardrobe[10];
+        renderCanvasSlot('canvas-top', top);
+        renderCanvasSlot('canvas-outer', null);
+        renderCanvasSlot('canvas-bottom', bottom);
+        renderCanvasSlot('canvas-shoes', shoes);
+        activeCanvasLook = { top, outer: null, bottom, shoes };
+        document.getElementById('stylist-note').innerHTML = `
+          <strong>IMPORTED FROM FASHIONISTA (VINCENT RUE):</strong> Boxy Minimalist Cotton drape over architectural pleated trousers and bone white leather trainers.
+        `;
+      } else if(fitType === 'chambray') {
+        const top = wardrobe.find(i => i.id === 'garment-17') || wardrobe[16];
+        const bottom = wardrobe.find(i => i.id === 'garment-12') || wardrobe[11];
+        const shoes = wardrobe.find(i => i.id === 'garment-20') || wardrobe[19];
+        renderCanvasSlot('canvas-top', top);
+        renderCanvasSlot('canvas-outer', null);
+        renderCanvasSlot('canvas-bottom', bottom);
+        renderCanvasSlot('canvas-shoes', shoes);
+        activeCanvasLook = { top, outer: null, bottom, shoes };
+        document.getElementById('stylist-note').innerHTML = `
+          <strong>IMPORTED FROM FASHIONISTA (LIAM VANCE):</strong> Unbuttoned camp-collar chambray shirt with modular tactical cargo trousers for relaxed weekend ease.
+        `;
+      } else if(fitType === 'script') {
+        const top = wardrobe.find(i => i.id === 'garment-14') || wardrobe[13];
+        const bottom = wardrobe.find(i => i.id === 'garment-04') || wardrobe[3];
+        const shoes = wardrobe.find(i => i.id === 'garment-05') || wardrobe[4];
+        renderCanvasSlot('canvas-top', top);
+        renderCanvasSlot('canvas-outer', null);
+        renderCanvasSlot('canvas-bottom', bottom);
+        renderCanvasSlot('canvas-shoes', shoes);
+        activeCanvasLook = { top, outer: null, bottom, shoes };
+        document.getElementById('stylist-note').innerHTML = `
+          <strong>IMPORTED FROM FASHIONISTA (ALAN CHEN):</strong> Longsleeve calligraphy graphic tee with faded skater denim for riverside afternoon walk.
+        `;
+      } else {
+        const top = wardrobe.find(i => i.id === 'garment-02') || wardrobe[1];
+        const bottom = wardrobe.find(i => i.id === 'garment-08') || wardrobe[7];
+        const shoes = wardrobe.find(i => i.id === 'garment-11') || wardrobe[10];
+        renderCanvasSlot('canvas-top', top);
+        renderCanvasSlot('canvas-outer', null);
+        renderCanvasSlot('canvas-bottom', bottom);
+        renderCanvasSlot('canvas-shoes', shoes);
+        activeCanvasLook = { top, outer: null, bottom, shoes };
+        document.getElementById('stylist-note').innerHTML = `
+          <strong>IMPORTED FROM FASHIONISTA (MATEO BLANCO):</strong> Retro sports polo collar paired with loose pleated beige trousers.
+        `;
+      }
+      window.location.hash = '#studio';
+      showToast(`Imported look to Studio Canvas`);
+    }
+
+    // CAPSULE GAP DATA
+    const CAPSULE_GAP_DATA = {
+      Streetwear: [
+        {
+          item: "Heavyweight Boxy Zip-Up Hoodie",
+          shade: "Washed Carbon Black (450 GSM)",
+          impact: "+14 Outfits Unlocked",
+          reason: "Layers under your varsity and trucker jackets, while framing your baggy skater denim with street drape.",
+          brands: ["DirtyCoins (Vietnam)", "Stüssy", "Represent Clo."]
+        },
+        {
+          item: "Raw Selvedge Wide Carpenter Pants",
+          shade: "Indigo Tint / Ecru Stitch",
+          impact: "+11 Outfits Unlocked",
+          reason: "Adds utilitarian hardware details and pocket geometry to balance heavy graphic tees and oversized hoodies.",
+          brands: ["DirtyCoins", "Carhartt WIP", "Dickies"]
+        },
+        {
+          item: "Low-Profile Retro Suede Skater Sneaker",
+          shade: "Charcoal Black / Gum Sole",
+          impact: "+9 Outfits Unlocked",
+          reason: "Anchors ultra-baggy hem breaks without getting swallowed by wide leg cuffs.",
+          brands: ["Vans Vault", "Adidas Originals", "Converse Chuck 70"]
+        }
+      ],
+      Minimalist: [
+        {
+          item: "Unstructured Relaxed Wool-Blend Blazer",
+          shade: "Matte Charcoal / Deep Stone",
+          impact: "+16 Outfits Unlocked",
+          reason: "Instantly elevates your AIRism tees and pleated trousers into gallery-ready and semi-formal evening attire.",
+          brands: ["Uniqlo (Smart Comfort Collection)", "COS", "Rue Miche"]
+        },
+        {
+          item: "Premium Pima Cotton Mockneck Top",
+          shade: "Bone White / Pale Chalk",
+          impact: "+12 Outfits Unlocked",
+          reason: "Creates a clean architectural neckline under open shirts, cardigans, and blazers without choking bulk.",
+          brands: ["Uniqlo (LifeWear U)", "Lemaire", "MUJI"]
+        },
+        {
+          item: "Minimalist Polished Leather Loafer",
+          shade: "High-Shine Obsidian",
+          impact: "+10 Outfits Unlocked",
+          reason: "Replaces sneakers for sharp transition events while maintaining clean ankle silhouette with smart pants.",
+          brands: ["Dr. Martens (Adrian)", "G.H. Bass", "COS"]
+        }
+      ],
+      Techwear: [
+        {
+          item: "3-Layer GORE-TEX Modular Hard Shell",
+          shade: "Stealth Black / Matte Finish",
+          impact: "+15 Outfits Unlocked",
+          reason: "Supplies total weather-shield protection and structured geometric drape over casual rib tees.",
+          brands: ["Arc'teryx", "Nike ACG", "Uniqlo Blocktech"]
+        },
+        {
+          item: "Integrated Webbing Belt Utility Cargo",
+          shade: "Dark Asphalt Grey",
+          impact: "+13 Outfits Unlocked",
+          reason: "Water-repellent nylon weave completes the waterproof trail runner aesthetic with functional articulation.",
+          brands: ["ACRONYM", "Stone Island Shadow Project", "Nike ACG"]
+        },
+        {
+          item: "Weatherproof Vibram Trail Runner",
+          shade: "Triple Black / Reflective Accents",
+          impact: "+8 Outfits Unlocked",
+          reason: "Provides aggressive tread grip and technical sleekness beneath wide cargo hems.",
+          brands: ["Salomon (XT-6 / ACS Pro)", "Hoka One One", "Roa Hiking"]
+        }
+      ],
+      Vintage: [
+        {
+          item: "Washed Corduroy Overshirt Jacket",
+          shade: "Vintage Tobacco Brown",
+          impact: "+13 Outfits Unlocked",
+          reason: "Injects textural depth and 1970s collegiate warmth when thrown over chambray shirts or white tees.",
+          brands: ["Carhartt WIP", "Levi's Vintage Clothing", "Corridor"]
+        },
+        {
+          item: "Double-Knee Heavy Drill Work Pants",
+          shade: "Washed Duck Tan",
+          impact: "+10 Outfits Unlocked",
+          reason: "Riveted knee patches yield an authentic heritage break over sturdy leather shoes and canvas sneakers.",
+          brands: ["Stan Ray", "Carhartt WIP", "Ben Davis"]
+        },
+        {
+          item: "Goodyear-Welted 6-Inch Leather Work Boot",
+          shade: "Briar Oil Slick Brown",
+          impact: "+9 Outfits Unlocked",
+          reason: "Provides rugged proportional counterweight to heavy denim truckers and canvas workwear trousers.",
+          brands: ["Red Wing Heritage", "Chippewa", "Danner"]
+        }
+      ]
+    };
+
+    // QUIZ LOGIC
+    function recordQuizAnswer(questionIndex, styleCategory, btnElement) {
+      userQuizAnswers[questionIndex] = styleCategory;
+      document.querySelectorAll(`.quiz-q${questionIndex}`).forEach(btn => {
+        btn.classList.remove('border-obsidian', 'bg-obsidian', 'text-bone');
+        btn.classList.add('border-hairline', 'bg-bone-muted', 'text-obsidian');
+      });
+      btnElement.classList.remove('border-hairline', 'bg-bone-muted', 'text-obsidian');
+      btnElement.classList.add('border-obsidian', 'bg-obsidian', 'text-bone');
+    }
+
+    function resetStyleDiagnostic() {
+      userQuizAnswers = { 1: null, 2: null, 3: null, 4: null, 5: null };
+      
+      for (let i = 1; i <= 5; i++) {
+        document.querySelectorAll(`.quiz-q${i}`).forEach(btn => {
+          btn.classList.remove('border-obsidian', 'bg-obsidian', 'text-bone');
+          btn.classList.add('border-hairline', 'bg-bone-muted', 'text-obsidian');
+        });
+      }
+
+      const reportContainer = document.getElementById('diagnostic-report-container');
+      if (reportContainer) reportContainer.classList.add('hidden');
+
+      const quizForm = document.getElementById('quiz-form-container');
+      if (quizForm) quizForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      showToast('Diagnostic Reset. Ready for new inputs.');
+    }
+
+    function calculateStyleAndCapsuleMatrix() {
+      const answeredCount = Object.values(userQuizAnswers).filter(Boolean).length;
+      if (answeredCount < 5) {
+        alert(`You have answered ${answeredCount} of 5 questions. Please complete all questions to calibrate your archetype and cross-reference your wardrobe.`);
+        return;
+      }
+
+      const counts = { Streetwear: 0, Minimalist: 0, Techwear: 0, Vintage: 0 };
+      Object.values(userQuizAnswers).forEach(val => {
+        if(counts[val] !== undefined) counts[val]++;
+      });
+
+      let topStyle = 'Streetwear';
+      let maxScore = -1;
+      for (const [st, score] of Object.entries(counts)) {
+        if(score > maxScore) {
+          maxScore = score;
+          topStyle = st;
+        }
+      }
+      calibratedArchetype = topStyle;
+
+      const reportContainer = document.getElementById('diagnostic-report-container');
+      const title = document.getElementById('report-archetype-title');
+      const desc = document.getElementById('report-archetype-desc');
+      const pillars = document.getElementById('report-pillars');
+      const brands = document.getElementById('report-brands');
+      const shoes = document.getElementById('report-shoes');
+      const badge = document.getElementById('report-confidence-badge');
+
+      if (badge) badge.innerText = `${Math.round((maxScore / 5) * 100)}% PROFILE CONFIDENCE`;
+
+      if (topStyle === 'Streetwear') {
+        if (title) title.innerText = "THE AVANT-STREET ARCHITECT";
+        if (desc) desc.innerText = "You dominate heavy dropped-shoulder volumes, raw graphic storytelling, and washed baggy denims inspired by contemporary Vietnamese streetwear culture and Japanese subcultures.";
+        if (pillars) pillars.innerText = "Heavy Baggy Denim, Boxy Tees, Varsity Drapes";
+        if (brands) brands.innerText = "DirtyCoins, Stüssy, Represent Clo.";
+        if (shoes) shoes.innerText = "Chunky Skate Platform Lows";
+      } else if (topStyle === 'Minimalist') {
+        if (title) title.innerText = "THE ARCHITECTURAL MINIMALIST";
+        if (desc) desc.innerText = "You value restrained geometry, pristine fabric textures, and subtle tone-on-tone harmonies rooted in Japanese LifeWear and contemporary European tailoring.";
+        if (pillars) pillars.innerText = "AIRism Oversized, Pleated Trousers, Wool Blazers";
+        if (brands) brands.innerText = "Uniqlo LifeWear, COS, Rue Miche, Lemaire";
+        if (shoes) shoes.innerText = "Clean Low-Profile White Trainers / Polished Derbies";
+      } else if (topStyle === 'Techwear') {
+        if (title) title.innerText = "THE URBAN GORPCORE NOMAD";
+        if (desc) desc.innerText = "You demand all-weather functionality, ergonomic joint articulation, and modular utility pockets calibrated for modern active movement through metropolitan grids.";
+        if (pillars) pillars.innerText = "GORE-TEX Shells, Modular Cargoes, Technical Base Layers";
+        if (brands) brands.innerText = "Arc'teryx, Salomon, Nike ACG, Stone Island";
+        if (shoes) shoes.innerText = "Vibram-Sole Weatherproof Trail Runners";
+      } else {
+        if (title) title.innerText = "THE HERITAGE WORKWEAR CURATOR";
+        if (desc) desc.innerText = "You appreciate durable duck canvas, time-softened indigo denims, and archival American workwear silhouettes built with honest character and utilitarian craftsmanship.";
+        if (pillars) pillars.innerText = "Trucker Denim, Double-Knee Trousers, Chambray Shirts";
+        if (brands) brands.innerText = "Carhartt WIP, Levi's Vintage, Dickies, Stan Ray";
+        if (shoes) shoes.innerText = "Goodyear-Welted Leather Work Boots";
+      }
+
+      const ownedGrid = document.getElementById('report-owned-grid');
+      if (ownedGrid) {
+        ownedGrid.innerHTML = '';
+        const matchingOwned = wardrobe.filter(item => item.style === topStyle);
+        const matchCountEl = document.getElementById('report-match-count');
+        if (matchCountEl) matchCountEl.innerText = `${matchingOwned.length} Items Found In Your Closet`;
+
+        if (matchingOwned.length > 0) {
+          matchingOwned.forEach(item => {
+            const itemCard = document.createElement('div');
+            itemCard.className = "bg-bone border border-hairline p-2.5 flex flex-col justify-between shadow-sm";
+            itemCard.innerHTML = `
+              <div class="aspect-[3/4] bg-bone-muted overflow-hidden relative">
+                <img src="${item.img || ''}" onerror="handleImageFallback(this, '${item.name}')" class="w-full h-full object-cover">
+                <span class="absolute top-1.5 left-1.5 bg-obsidian text-bone text-[8px] font-mono uppercase px-1.5 py-0.5">OWNED</span>
+              </div>
+              <div class="pt-2">
+                <p class="text-[11px] font-bold text-obsidian uppercase truncate">${item.name}</p>
+                <p class="text-[9px] font-mono text-obsidian/60 mt-0.5">${item.color} • ${item.category.toUpperCase()}</p>
+              </div>
+            `;
+            ownedGrid.appendChild(itemCard);
+          });
+        } else {
+          ownedGrid.innerHTML = `
+            <div class="col-span-full p-6 bg-bone border border-hairline text-center text-xs font-mono text-obsidian/60 uppercase">
+              No matching items for this style currently logged. Use "Add Piece" or see recommended gaps below.
+            </div>
+          `;
+        }
+      }
+
+      const gapsGrid = document.getElementById('report-capsule-gaps');
+      if (gapsGrid) {
+        gapsGrid.innerHTML = '';
+        const gapItems = CAPSULE_GAP_DATA[topStyle] || CAPSULE_GAP_DATA['Streetwear'];
+
+        gapItems.forEach((gap, idx) => {
+          const gapCard = document.createElement('div');
+          gapCard.className = "bg-bone border border-hairline p-6 flex flex-col justify-between space-y-4 shadow-sm hover:border-obsidian transition-colors";
+          gapCard.innerHTML = `
+            <div>
+              <div class="flex items-center justify-between border-b border-hairline pb-2 mb-3">
+                <span class="text-[9px] font-mono uppercase text-obsidian/50 tracking-wider">GAP PIECE // 0${idx + 1}</span>
+                <span class="text-[9px] font-mono uppercase font-bold text-obsidian bg-bone-muted px-2 py-0.5 border border-hairline">${gap.impact}</span>
+              </div>
+              <h5 class="font-display font-bold text-lg text-obsidian uppercase tracking-tight">${gap.item}</h5>
+              <p class="text-[10px] font-mono text-obsidian/60 uppercase mt-0.5">${gap.shade}</p>
+              <p class="text-xs text-obsidian/75 font-normal mt-3 leading-relaxed">${gap.reason}</p>
+            </div>
+
+            <div class="pt-3 border-t border-hairline">
+              <p class="text-[9px] font-mono uppercase text-obsidian/50 tracking-wider mb-2">WHERE TO SOURCE (CURATED BRANDS):</p>
+              <div class="flex flex-wrap gap-1.5">
+                ${gap.brands.map(b => `<span class="bg-bone-muted text-obsidian text-[10px] font-mono px-2 py-1 border border-hairline uppercase">${b}</span>`).join('')}
+              </div>
+            </div>
+          `;
+          gapsGrid.appendChild(gapCard);
+        });
+      }
+
+      if (reportContainer) {
+        reportContainer.classList.remove('hidden');
+        reportContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+      showToast(`Style Calibrated: ${topStyle}`);
+    }
+
+    // ADD MODAL CONTROLLERS
+    function openModal() {
+      openModalById('add-modal', 'add-modal-card');
+    }
+
+    function closeModal() {
+      closeModalById('add-modal', 'add-modal-card');
+    }
+
+    // IMAGE COMPRESSION
+    function compressImageFile(file, maxWidth = 800, quality = 0.75) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = (event) => {
+          const img = new Image();
+          img.src = event.target.result;
+          img.onload = () => {
+            const canvas = document.createElement('canvas');
+            let width = img.width;
+            let height = img.height;
+
+            if (width > height) {
+              if (width > maxWidth) {
+                height = Math.round((height * maxWidth) / width);
+                width = maxWidth;
+              }
+            } else {
+              if (height > maxWidth) {
+                width = Math.round((width * maxWidth) / height);
+                height = maxWidth;
+              }
+            }
+
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0, width, height);
+            resolve(canvas.toDataURL('image/jpeg', quality));
+          };
+          img.onerror = (err) => reject(err);
+        };
+        reader.onerror = (err) => reject(err);
+      });
+    }
+
+    async function handleFormSubmit(e) {
+      e.preventDefault();
+      const submitBtn = document.getElementById('btn-submit-piece');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> <span>Saving...</span>`;
+      }
+
+      const name = document.getElementById('input-name').value;
+      const category = document.getElementById('input-category').value;
+      const style = document.getElementById('input-style').value;
+      const color = document.getElementById('input-color').value;
+      const occasion = document.getElementById('input-occasion').value;
+      const fileInput = document.getElementById('input-file');
+      const urlInput = document.getElementById('input-img').value;
+
+      let finalImage = urlInput.trim();
+
+      if (fileInput.files && fileInput.files[0]) {
+        try {
+          finalImage = await compressImageFile(fileInput.files[0], 800, 0.75);
+        } catch(err) {
+          console.error("Compression error:", err);
+        }
+      }
+
+      savePieceToCloset(name, category, style, color, occasion, finalImage);
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = `<span>Register Piece</span>`;
+      }
+    }
+
+    function savePieceToCloset(name, category, style, color, occasion, imgSrc) {
+      const newPiece = {
+        id: 'piece-' + Date.now(),
+        name,
+        category,
+        style,
+        color,
+        colorCode: '#121212',
+        occasion: occasion || 'street',
+        weather: ['hot', 'mild', 'cool', 'cold'],
+        img: imgSrc || ''
+      };
+
+      wardrobe.unshift(newPiece);
+      SafeStorage.set('kloset_user_wardrobe_master', wardrobe);
+
+      currentCategory = 'all';
+      currentStyle = 'all';
+      document.querySelectorAll('.cat-filter-btn').forEach(btn => {
+        btn.className = btn.dataset.cat === 'all' 
+          ? "cat-filter-btn px-4 py-2 border border-obsidian bg-obsidian text-bone active:scale-95"
+          : "cat-filter-btn px-4 py-2 border border-hairline bg-bone-muted text-obsidian/70 hover:text-obsidian active:scale-95";
+      });
+      document.querySelectorAll('.style-filter-btn').forEach(btn => {
+        btn.className = btn.dataset.style === 'all' ? "style-filter-btn underline font-bold text-obsidian" : "style-filter-btn hover:underline text-obsidian/70";
+      });
+
+      renderCloset();
+      closeModal();
+      const form = document.getElementById('add-item-form');
+      if (form) form.reset();
+
+      showToast(`Added "${name}" to Closet!`);
+      window.location.hash = '#wardrobe';
+    }
+
+    function deleteGarment(id) {
+      if(confirm('Remove this piece from your KLOSET archive?')) {
+        wardrobe = wardrobe.filter(i => i.id !== id);
+        SafeStorage.set('kloset_user_wardrobe_master', wardrobe);
+        renderCloset();
+        showToast('Piece removed from Closet');
+      }
+    }
+
+    // INITIALIZATION GUARANTEE
+    function initializeApplication() {
+      renderCloset();
+      updateAuthHeaderUI();
+      updateFavoritesBadge();
+    }
+
+    // Instant execution
+    initializeApplication();
+
+    // DOM & Load hooks
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initializeApplication);
+    }
+    window.addEventListener('load', initializeApplication);
+  </script>
+</body>
+</html>
